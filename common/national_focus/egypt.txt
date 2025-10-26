@@ -133,6 +133,35 @@ focus_tree = {
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_egyptneutrality }
         prerequisite = { focus = EGY_AngloEgyptDogovor }
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = EGY_egyptneutrality
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
     }
 
     focus = {
@@ -183,7 +212,46 @@ focus_tree = {
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_revolution }
         prerequisite = { focus = EGY_AngloEgyptDogovor }
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_egyptneutrality
+			}
+		}
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = EGY_revolution
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
     }
 
     focus = {
@@ -363,6 +431,17 @@ focus_tree = {
 				has_completed_focus = EGY_independt
 			}
 		}
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_egyptneutrality
+			}
+		}
     }
 
     focus = {
@@ -510,7 +589,17 @@ focus_tree = {
 				has_completed_focus = EGY_independt
 			}
 		}
-
+		offset = {
+			x = 26
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_egyptneutrality
+			}
+		 }
     }
 
     focus = {
