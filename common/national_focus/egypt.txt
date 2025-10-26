@@ -352,7 +352,17 @@ focus_tree = {
         bypass_if_unavailable = no
 		prerequisite = { focus = EGY_egyptneutrality focus = EGY_british_investory }
         
-
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_independt
+			}
+		}
     }
 
     focus = {
@@ -488,6 +498,18 @@ focus_tree = {
         bypass_if_unavailable = no
 		
         prerequisite = { focus = EGY_british_investory focus = EGY_egyptneutrality }
+		
+		offset = {
+			x = 11
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_independt
+			}
+		}
 
     }
 
