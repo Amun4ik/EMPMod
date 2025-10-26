@@ -6269,36 +6269,6 @@ minor_count_til_10 = {
 		value = 10
 	}
 }
-YUG_hug_your_cities = {
-	enable = {
-		tag = YUG
-		OR = {
-			GER = { 
-				NOT = { surrender_progress > 0 } 
-				is_ai = no 
-			}
-			ITA = { 
-				NOT = { surrender_progress > 0 } 
-				is_ai = no 
-			}
-		}
-		surrender_progress < 0.8
-		is_historical_focus_on = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = put_unit_buffers
-		ratio = 2
-		states = {
-			107
-		}
-		area = europe
-		subtract_invasions_from_need = no
-		subtract_fronts_from_need = no
-	}
-
-}
 AI_not_in_war = {
 	enable = { 
 		difficulty > 1

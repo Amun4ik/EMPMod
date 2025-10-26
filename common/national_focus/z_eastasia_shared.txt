@@ -1287,7 +1287,9 @@
 
 		completion_reward_joint_originator = {
 			custom_effect_tooltip = jap_newability_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
             add_ideas = JAP_laststand
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					NOT = { has_tech = basic_fortification_tech }

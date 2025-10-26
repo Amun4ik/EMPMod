@@ -14856,7 +14856,7 @@ focus_tree = {
 			}
 		}
 
-		x = 50
+		x = 51
 		y = 1
 		offset = {
 			x = -29
@@ -15801,16 +15801,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-                add_equipment_to_stockpile = {
-                    type = light_tank_chassis_2
-				    amount = 250
-				    producer = GER
-				    variant_name = "Panzer II Ausf. A"
-				}
+            add_equipment_to_stockpile = {
+                type = light_tank_chassis_2
+				amount = 250
+				producer = GER
+				variant_name = "Panzer II Ausf. A"
 			}
 			GER = {
 				country_event = { id = italy.5 days = 1 }

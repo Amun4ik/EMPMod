@@ -6413,7 +6413,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		target_root_trigger = {
-			has_completed_focus = ITA_balkan_ambition
+			has_completed_focus = ITA_italian_irredentism
 			is_subject = no
 		}
 
@@ -7227,6 +7227,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		available = {
+			has_completed_focus = ITA_italian_irredentism
 			is_subject = no
 			45 = {
 				NOT = {

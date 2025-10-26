@@ -26,7 +26,7 @@ ability = {
 		
 		one_time_effect = {
 			add_temporary_buff_to_units = {
-				combat_defense = 0.05
+				combat_defense = 0.1
 				combat_entrenchment = 0.1
 				str_damage_multiplier = 0.1
 				
