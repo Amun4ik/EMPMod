@@ -183,5 +183,93 @@ ideas = {
 				conscription_factor = 0.2
 		    }
 	    }
+		embro_autonomy = {
+	
+			picture = triumphant_will
+	
+			removal_cost = -1	
+	
+			allowed = { 
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				autonomy_gain_global_factor = -0.15
+				overlord_trade_cost_factor = -0.15
+				extra_trade_to_overlord_factor = 0.15
+				cic_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.3
+				compliance_growth = 0.15
+			}
+		}
+		embro_spainpaymentaxis = {
+	
+			picture = ger_mefo_bills_payment
+	
+			removal_cost = -1	
+	
+			cancel = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.1
+			}
+			
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.1
+			}
+		}
+		embro_spainpaymentsoviet = {
+	
+			picture = ger_mefo_bills_payment
+	
+			removal_cost = -1	
+	
+			cancel = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			targeted_modifier = {
+				tag = SOV
+				cic_to_target_factor = 0.1
+			}
+		}
+		embro_spainpaymentfrench = {
+	
+			picture = ger_mefo_bills_payment
+	
+			removal_cost = -1	
+	
+			cancel = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 0.1
+			}
+		}
 	}
 }

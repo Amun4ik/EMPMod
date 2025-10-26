@@ -6807,6 +6807,7 @@ ITA_diplomacy_balkan_decision_category = {
 					transfer_state = 970
 				}
 				add_ideas = ITA_ALB_italian_settlers
+				add_ideas = embro_autonomy
 			}
 			802 = {
 				add_core_of = ALB

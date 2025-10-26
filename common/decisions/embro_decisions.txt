@@ -326,4 +326,114 @@ political_actions = {
 			base = 1000
 		}
 	}
+	embro_spainpayment_axis = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			AND = {
+				has_volunteers_amount_from = {
+					tag = ITA
+					count > 1
+			    }
+				has_volunteers_amount_from = {
+					tag = GER
+					count > 1
+			    }
+			}
+		}
+
+		visible = {
+            original_tag = SPR
+			is_ai = yes	
+			is_historical_focus_on = yes
+			OR = {
+			    has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = embro_spainpaymentaxis
+				days = 1460
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	embro_spainpayment_soviet = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+            original_tag = SPR
+			is_ai = yes	
+			is_historical_focus_on = yes
+			has_government = democratic
+			has_volunteers_amount_from = {
+				tag = SOV
+				count > 1
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = embro_spainpaymentsoviet
+				days = 1460
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	embro_spainpayment_french = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+            original_tag = SPR
+			is_ai = yes	
+			is_historical_focus_on = yes
+			has_government = democratic
+			has_volunteers_amount_from = {
+				tag = FRA
+				count > 1
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = embro_spainpaymentfrench
+				days = 1460
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
 }

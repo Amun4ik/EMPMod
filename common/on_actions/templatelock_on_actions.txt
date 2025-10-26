@@ -1,0 +1,72 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				#Italy
+				if = { #
+					limit = {
+						has_template = "Truppe Irregolari a Cavallo"
+					}
+					set_division_template_lock = {
+						division_template = "Truppe Irregolari a Cavallo"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Banda Indigena Irregolare"
+					}
+					set_division_template_lock = {
+						division_template = "Banda Indigena Irregolare"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Camicie Nere" 
+					}
+					set_division_template_lock = {
+						division_template = "Camicie Nere"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Banda Irregolare Eritrea"
+					}
+					set_division_template_lock = {
+						division_template = "Banda Irregolare Eritrea"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Banda Irregolare Somala"
+					}
+					set_division_template_lock = {
+						division_template = "Banda Irregolare Somala"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Banda Irregolare Libica"
+					}
+					set_division_template_lock = {
+						division_template = "Banda Irregolare Libica"
+						is_locked = no
+					}
+				}
+				if = { #
+					limit = {
+						has_template = "Banda Indigena Irregolare"
+					}
+					set_division_template_lock = {
+						division_template = "Banda Indigena Irregolare"
+						is_locked = no
+					}
+				}
+			}
+		}
+	}
+}
