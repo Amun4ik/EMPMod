@@ -1,6 +1,6 @@
 focus_tree = {
     id = EGY_focus_tree
-    
+
     country = {
         factor = 0
         modifier = {
@@ -24,7 +24,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_independt }
-		
+
 		allow_branch = {
 			if = {
 				limit = {
@@ -38,7 +38,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
@@ -55,12 +55,12 @@ focus_tree = {
 		}
 
     }
-	
+
 
     focus = {
         id = EGY_independt
         icon = GFX_focus_eng_decolonization
-        x = 22
+        x = 28
         y = 0
         relative_position_id = EGY_poslushanie
         cost = 10
@@ -70,7 +70,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_poslushanie }
-		
+
 		allow_branch = {
 			if = {
 				limit = {
@@ -84,7 +84,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
@@ -114,15 +114,15 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_independt }
 
     }
-	
+
 	focus = {
         id = EGY_revolution
         icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-        x = 10
+        x = 15
         y = 1
         cost = 10
 		relative_position_id = EGY_AngloEgyptDogovor
@@ -133,7 +133,7 @@ focus_tree = {
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_egyptneutrality }
         prerequisite = { focus = EGY_AngloEgyptDogovor }
-		
+
 		allow_branch = {
 			if = {
 				limit = {
@@ -147,7 +147,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
@@ -167,7 +167,7 @@ focus_tree = {
     focus = {
         id = EGY_arabicsocialism
         icon = GFX_focus_ETH_african_wildfire
-        x = -6
+        x = -8
         y = 2
         relative_position_id = EGY_revolution
         cost = 10
@@ -184,7 +184,7 @@ focus_tree = {
     focus = {
         id = EGY_bratyamusulmane
         icon = GFX_focus_generic_spread_fascism
-        x = 6
+        x = 8
         y = 2
         relative_position_id = EGY_revolution
         cost = 10
@@ -223,7 +223,7 @@ focus_tree = {
 				has_completed_focus = EGY_egyptneutrality
 			}
 		}
-		
+
 		allow_branch = {
 			if = {
 				limit = {
@@ -237,7 +237,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
@@ -367,7 +367,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_defendbritishcolonies focus = EGY_askforpalestine }
 
     }
@@ -419,7 +419,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
 		prerequisite = { focus = EGY_egyptneutrality focus = EGY_british_investory }
-        
+
 		offset = {
 			x = 3
 			y = 0
@@ -456,7 +456,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_improveeconomy }
 
     }
@@ -473,7 +473,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_establishfreetrade }
 
     }
@@ -490,7 +490,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_improveeconomy }
 
     }
@@ -507,7 +507,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_improveeconomy }
 
     }
@@ -524,7 +524,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_centreoftrade }
 
     }
@@ -541,7 +541,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_conquerthesands }
 
     }
@@ -558,7 +558,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_civilisationofnil }
 
     }
@@ -575,9 +575,9 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-		
+
         prerequisite = { focus = EGY_british_investory focus = EGY_egyptneutrality }
-		
+
 		offset = {
 			x = 11
 			y = 0
@@ -614,7 +614,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_armyofegypt }
 
     }
@@ -631,7 +631,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_armyofegypt }
 
     }
@@ -648,7 +648,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_armyofegypt }
 
     }
@@ -665,7 +665,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_forfifyelalamein }
 
     }
@@ -682,7 +682,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_establishartillellyforces }
 
     }
@@ -699,14 +699,14 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_establishaviation }
 
     }
 
     focus = {
         id = EGY_nationalizesuez
-        icon = GFX_focus_attack_britain
+        icon = GFX_focus_generic_annex_country_2
         x = 2
         y = 1
         relative_position_id = EGY_egyptneutrality
@@ -733,7 +733,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_empowerwafd }
 
     }
@@ -750,7 +750,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_egyptrepublic }
 
     }
@@ -767,7 +767,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_empowersultan }
 
     }
@@ -784,7 +784,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_restoresultanat }
 
     }
@@ -801,7 +801,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_fundwars }
 
     }
@@ -818,7 +818,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_alexandriawharfs }
 
     }
@@ -835,7 +835,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_armyofegypt }
 
     }
@@ -852,7 +852,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_alexandrianfleet }
 
     }
@@ -869,113 +869,11 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_bratyamusulmane }
 
     }
 
-    focus = {
-        id = EGY_joinaxis
-        icon = GFX_focus_chi_mission_to_germany
-        x = -2
-        y = 1
-        relative_position_id = EGY_collectvolunteers
-        cost = 10
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        mutually_exclusive = { focus = EGY_arableague }
-        prerequisite = { focus = EGY_collectvolunteers }
-
-    }
-
-    focus = {
-        id = EGY_lybiaforpuppet
-        icon = GFX_focus_ITA_italian_hegemony
-        x = -1
-        y = 1
-        relative_position_id = EGY_joinaxis
-        cost = 10
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        
-        prerequisite = { focus = EGY_joinaxis }
-
-    }
-
-    focus = {
-        id = EGY_freethearabs
-        icon = GFX_focus_AFG_against_kabul
-        x = 0
-        y = 2
-        relative_position_id = EGY_collectvolunteers
-        cost = 10
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        
-        prerequisite = { focus = EGY_joinaxis focus = EGY_arableague }
-
-    }
-
-    focus = {
-        id = EGY_unitedarab
-        icon = GFX_focus_AFG_savior_of_the_holy_lands
-        x = 0
-        y = 1
-        relative_position_id = EGY_freethearabs
-        cost = 5
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        
-        prerequisite = { focus = EGY_freethearabs }
-
-    }
-
-    focus = {
-        id = EGY_arableague
-        icon = GFX_focus_TUR_treaty_of_saadabad
-        x = 2
-        y = 1
-        relative_position_id = EGY_collectvolunteers
-        cost = 5
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        mutually_exclusive = { focus = EGY_joinaxis }
-        prerequisite = { focus = EGY_collectvolunteers }
-
-    }
-
-    focus = {
-        id = EGY_armyofjihadi
-        icon = GFX_focus_generic_islamic_propaganda
-        x = 1
-        y = 1
-        relative_position_id = EGY_arableague
-        cost = 5
-        available_if_capitulated = no
-        cancel_if_invalid = no
-        continue_if_invalid = no
-        cancelable = no
-        bypass_if_unavailable = no
-        
-        prerequisite = { focus = EGY_arableague }
-
-    }
-	
     focus = {
         id = EGY_british_investory
         icon = GFX_goal_generic_demand_territory
@@ -988,11 +886,11 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        
+
         prerequisite = { focus = EGY_poslushanie }
 
     }
-	
+
     focus = {
         id = EGY_alleinc_of_ENG
         icon = GFX_focus_eng_concessions_to_the_trade_unions
@@ -1009,11 +907,198 @@ focus_tree = {
         prerequisite = { focus = EGY_egyptneutrality }
 
     }
-	
+
     focus = {
         id = EGY_opolchenie
-        icon = GFX_focus_ETH_african_wildfire
+        icon = GFX_focus_generic_spur_communist_revolutions
         x = 0
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+
+    focus = {
+        id = EGY_SOV_eqveepment
+        icon = GFX_focus_chi_mission_to_the_soviet_union
+        x = 1
+        y = 1
+        relative_position_id = EGY_molodye_oficery
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_molodye_oficery }
+
+    }
+	
+	focus = {
+        id = EGY_international_brigad
+        icon = GFX_focus_spr_torchbearers_of_tomorrow
+        x = -2
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+	
+	focus = {
+        id = EGY_udar_po_levym
+        icon = GFX_focus_SWE_neither_death_nor_dishonor
+        x = -4
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_pravym }
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+    }
+	
+	focus = {
+        id = EGY_udar_po_pravym
+        icon = GFX_focus_PER_state_atheism
+        x = 4
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_levym }
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+	
+	focus = {
+        id = EGY_compromis
+        icon = GFX_goal_generic_major_alliance
+        x = 0
+        y = 3
+        relative_position_id = EGY_revolution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_udar_po_pravym focus = EGY_udar_po_levym }
+        prerequisite = { focus = EGY_arabicsocialism focus = EGY_bratyamusulmane }
+
+    }
+	
+	focus = {
+        id = EGY_obedinit_generalov
+        icon = GFX_focus_PER_march_to_nile
+        x = 2
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+     }
+     
+	 focus = {
+        id = EGY_GER_eqveepment
+        icon = GFX_focus_chi_mission_to_germany
+        x = -2
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+     }
+	 
+	 focus = {
+        id = EGY_Pytch
+        icon = GFX_focus_RAJ_a_private_military
+        x = 0
+        y = 1
+        relative_position_id = EGY_collectvolunteers
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_collectvolunteers }
+		prerequisite = { focus = EGY_GER_eqveepment }
+		prerequisite = { focus = EGY_obedinit_generalov }
+
+     }
+	 
+	 
+	 focus = {
+        id = EGY_ITA_eqveepment
+        icon = GFX_focus_befriend_italy
+        x = -1
+        y = 1
+        relative_position_id = EGY_GER_eqveepment
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_GER_eqveepment }
+	 }
+	 focus = {
+        id = EGY_voenoe_polozhenie
+        icon = GFX_goal_generic_political_pressure
+        x = 1
+        y = 1
+        relative_position_id = EGY_obedinit_generalov
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_obedinit_generalov }
+	 }
+	 
+	 focus = {
+        id = EGY_molodye_oficery
+        icon = GFX_focus_AFG_defender_of_central_asia
+        x = 2
         y = 1
         relative_position_id = EGY_arabicsocialism
         cost = 10
@@ -1024,5 +1109,140 @@ focus_tree = {
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_arabicsocialism }
-
-    }
+	 }
+	 
+	 focus = {
+        id = EGY_zahvat_skladov
+        icon = GFX_focus_GER_liberate_exploited_colonial_workers
+        x = -1
+        y = 1
+        relative_position_id = EGY_international_brigad
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_international_brigad }
+	  }
+	  
+	  focus = {
+        id = EGY_vostanie
+        icon = GFX_focus_ITA_corpo_volontari_della_liberta
+        x = 0
+        y = 1
+        relative_position_id = EGY_opolchenie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_molodye_oficery }
+		prerequisite = { focus = EGY_opolchenie }
+		prerequisite = { focus = EGY_international_brigad }
+	 }
+	 
+	 focus = {
+        id = EGY_soc_dem
+        icon = GFX_focus_PER_strengthen_the_tudeh
+        x = -4
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_panarabic focus = EGY_SOV_alienc }
+        prerequisite = { focus = EGY_vostanie }
+		
+	 }
+	 
+	 focus = {
+        id = EGY_soc_panarabic
+        icon = GFX_focus_AUS_danubian_socialist_communes
+        x = 0
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_dem focus = EGY_SOV_alienc }
+        prerequisite = { focus = EGY_vostanie }
+		
+	 }
+	 
+	 focus = {
+        id = EGY_SOV_alienc
+        icon = GFX_focus_NOR_moscows_education_centers
+        x = 4
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_dem focus = EGY_soc_panarabic }
+        prerequisite = { focus = EGY_vostanie }
+		
+	 }
+	 
+	 focus = {
+        id = EGY_Asix
+        icon = GFX_focus_GER_appease_the_wehrmacht
+        x = -4
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_fasc_king }
+        prerequisite = { focus = EGY_Pytch }
+	 
+	 }
+	 
+	 focus = {
+        id = EGY_fasc_panarabic
+        icon = GFX_focus_IRQ_proclaim_united_arab_republic
+        x = 0
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_Asix focus = EGY_fasc_king }
+        prerequisite = { focus = EGY_Pytch }
+	 
+	 }
+	 
+	 focus = {
+        id = EGY_fasc_king
+        icon = GFX_focus_SWI_helvetic_junta
+        x = 4
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_Asix }
+        prerequisite = { focus = EGY_Pytch }
+	 
+ }
