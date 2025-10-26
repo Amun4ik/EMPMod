@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_sidor"
+		texturefile = "gfx/leaders/VOI/portrait_void_sidor.dds"
+	}
+}

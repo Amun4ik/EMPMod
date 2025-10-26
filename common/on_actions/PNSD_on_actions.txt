@@ -1,0 +1,56 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			every_possible_country = { add_ideas = PNSD_hidden }
+			every_possible_country = {
+				add_timed_idea = {
+					idea = EMBRO_startefectivnost
+					days = 1
+                }
+			}
+			MAL = {
+				give_resource_rights = { receiver = ENG state = 336 }
+				give_resource_rights = { receiver = ENG state = 333 }
+			}
+			INS = {
+				give_resource_rights = { receiver = HOL state = 672 }
+				give_resource_rights = { receiver = HOL state = 335 }
+				give_resource_rights = { receiver = HOL state = 334 }
+				give_resource_rights = { receiver = HOL state = 667 }
+				give_resource_rights = { receiver = HOL state = 673 }
+			}
+			PHI = {
+				give_resource_rights = { receiver = USA state = 623 }
+				give_resource_rights = { receiver = USA state = 327 }
+				give_resource_rights = { receiver = USA state = 628 }
+				give_resource_rights = { receiver = USA state = 627 }
+			}
+			SOV = {
+				give_resource_rights = { receiver = JAP state = 655 }
+			}
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_idea = PNSD_hidden }
+				}
+				add_ideas = PNSD_hidden
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_idea = PNSD_hidden }
+				}
+				add_ideas = PNSD_hidden
+			}
+		}
+	}
+}

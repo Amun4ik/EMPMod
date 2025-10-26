@@ -1,0 +1,28 @@
+ideas = {
+
+	country = {
+	
+	
+		arabictraditionsegypt = {
+		
+			picture = tur_kemalist_army_officers_powerful_neutral
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+				attrition = -0.1
+				supply_consumption_factor = -0.05
+				out_of_supply_factor = -0.05
+			}
+		}

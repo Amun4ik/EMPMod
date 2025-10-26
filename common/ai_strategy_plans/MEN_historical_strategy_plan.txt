@@ -1,0 +1,87 @@
+MEN_historical_strategy_plan = {
+	name = "MEN historical plan"
+	desc = "I FUCKING LOVE BE JAPAN SLAVE YEEEEE"
+
+	allowed = {
+		original_tag = MEN
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		JAP = {
+			NOT = {
+			    has_government = fascism
+			}	
+		}
+	}
+
+	ai_national_focuses = {
+	    JAP_developmengiang
+		siam_industrial_effort
+		siam_construction_effort
+		siam_construction_effort_2
+		siam_infrastructure_effort
+        siam_construction_effort_3
+		siam_infrastructure_effort_2
+		siam_production_effort
+		siam_production_effort_2
+		siam_production_effort_3
+		siam_extra_tech_slot
+		siam_extra_tech_slot_2
+		siam_technology_sharing
+		siam_naval_effort
+	    siam_political_effort
+		siam_collectivist_ethos
+		siam_nationalism_focus
+        siam_militarism
+		siam_military_youth
+		siam_paramilitarism
+		siam_ideological_fanaticism
+		siam_army_effort
+		siam_aviation_effort
+		siam_doctrine_effort
+		siam_doctrine_effort_2
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		armor = 2.0
+		artillery = 8.0
+		support_tech = 12.0
+	}
+
+	ideas = {
+		
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = 200
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 15
+	}
+
+	traits = {
+		fascist_demagogue = 500
+		silent_workhorse = 5
+		war_industrialist = 5	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

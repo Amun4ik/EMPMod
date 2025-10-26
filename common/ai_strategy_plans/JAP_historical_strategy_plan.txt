@@ -1,0 +1,227 @@
+JAP_historical_plan2 = {
+	name = "Japan historical plan"
+	desc = "Historical behavior for Japan"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				OR = {
+					not = { has_dlc = "Waking the Tiger" }
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEFAULT
+					}
+				}
+			}
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = FASCIST
+			}
+			has_country_flag = JAP_AI_RANDOM_FASCIST
+		}
+	}
+	abort = {
+		has_global_flag = SOV_has_early_war
+	}
+
+	ai_national_focuses = {
+		JAP_laststand
+		JAP_indonesiaoil
+		JAP_purge_the_kodoha_faction #March 10 1936
+		JAP_guide_the_zaibatsus #July 30 1936	
+		JAP_national_mobilization_law
+		JAP_national_research_policy
+		JAP_nationalize_war_industry
+		JAP_national_defense_state
+
+		JAP_liaison_conference #February 30 1937	
+		JAP_greater_east_asian_co_prosperity_sphere #May 10 1937
+		JAP_the_manchurian_project
+		JAP_intervene_in_china #July 20 1937
+		JAP_spiritual_mobilization
+		JAP_army_expansion_law
+		JAP_army_expansion
+		JAP_supremacy_of_will
+
+		JAP_new_naval_estimates
+		JAP_fighter_modernization
+		JAP_agility_focus
+		
+		JAP_carrier_warfare_experiments
+		JAP_first_air_fleet
+		JAP_the_zero
+		JAP_unified_fighter_development
+		JAP_expand_the_snlf
+
+		JAP_secure_china
+		JAP_cruiser_modernization
+		JAP_long_lance_torpedoes
+		JAP_develop_chinese_resources
+		JAP_sign_tripartite_pact		
+		JAP_strike_south_doctrine
+
+		JAP_alliance_with_siam
+		JAP_coal_liquification
+		
+		JAP_expand_the_showa_steel_works
+		JAP_expand_manchurian_railways
+		JAP_light_industry_development
+		JAP_heavy_industry_development
+		JAP_japanese_settlement
+		
+		JAP_integrategaiti
+		JAP_togetherplanning
+		JAP_supremacy_of_the_battlefleet
+		JAP_the_ultimate_battleship
+				
+		JAP_non_aggression_pact_with_the_soviet_union
+		JAP_secure_the_philippines
+		JAP_strike_on_the_southern_resource_area
+
+		JAP_warrior_spirit
+		JAP_jet_prototypes
+		JAP_strengthen_the_divine_wind
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		kanin_kotohito = 25.0
+		korechika_anami = 10.0
+		yasuji_okamura = 5.0
+		hitoshi_imamura = 5.0
+		mitsuo_fuchida = 5.0
+	}
+
+	traits = {
+		head_of_intelligence = 15.0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+JAP_historical_plan_against_allies = {
+	name = "Japan historical plan"
+	desc = "Historical behavior for Japan"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_completed_focus = JAP_strike_south_doctrine
+		if = {
+			limit = {
+				has_country_flag = JAP_strike_north
+			}
+			OR = {
+				has_war_with = USA
+				has_war_with = ENG
+			}
+		}
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				OR = {
+					not = { has_dlc = "Waking the Tiger" }
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEFAULT
+					}
+				}
+			}
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = FASCIST
+			}
+			has_country_flag = JAP_AI_RANDOM_FASCIST
+		}
+	}
+	abort = {
+		has_global_flag = SOV_has_early_war
+	}
+
+	ai_national_focuses = {	
+		JAP_purge_the_kodoha_faction #March 10 1936
+		JAP_guide_the_zaibatsus #July 30 1936	
+		JAP_national_mobilization_law
+		JAP_national_research_policy
+		JAP_nationalize_war_industry
+		JAP_national_defense_state
+
+		JAP_liaison_conference #February 30 1937	
+		JAP_greater_east_asian_co_prosperity_sphere #May 10 1937
+		JAP_spiritual_mobilization
+		JAP_intervene_in_china #July 20 1937
+		JAP_army_expansion_law
+		JAP_army_expansion
+		JAP_supremacy_of_will
+
+		JAP_new_naval_estimates
+		JAP_fighter_modernization
+		JAP_agility_focus
+		
+		JAP_carrier_warfare_experiments
+		JAP_first_air_fleet
+		JAP_the_zero
+		JAP_unified_fighter_development
+		JAP_expand_the_snlf
+
+		JAP_secure_china
+		JAP_cruiser_modernization
+		JAP_long_lance_torpedoes
+		JAP_develop_chinese_resources
+		JAP_sign_tripartite_pact		
+		JAP_the_manchurian_project
+		JAP_strike_south_doctrine
+
+		JAP_alliance_with_siam
+		JAP_coal_liquification
+		JAP_expand_the_showa_steel_works
+		JAP_expand_manchurian_railways
+		JAP_light_industry_development
+		JAP_heavy_industry_development
+		JAP_japanese_settlement
+		JAP_non_aggression_pact_with_the_soviet_union
+		JAP_secure_the_philippines
+		JAP_strike_on_the_southern_resource_area
+
+		JAP_warrior_spirit
+		JAP_jet_prototypes
+		JAP_strengthen_the_divine_wind
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		kanin_kotohito = 25.0
+		korechika_anami = 10.0
+		yasuji_okamura = 5.0
+		hitoshi_imamura = 5.0
+		mitsuo_fuchida = 5.0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

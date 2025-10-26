@@ -1,0 +1,329 @@
+political_actions = {
+	AST_AI_create_plane_template = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+	     	has_tech = improved_small_airframe
+	     	has_tech = aa_lmg
+			has_air_experience > 1
+		}
+
+		visible = {
+			tag = AST
+			is_ai = yes	
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+				air_experience = -1
+				create_equipment_variant = { 
+					name = "CA-17"
+					type = small_plane_airframe_2
+					parent_version = 0
+					allow_without_tech = yes # Tooltip purposes, tech is required anyways
+					modules = {
+						fixed_main_weapon_slot = light_mg_2x
+						fixed_auxiliary_weapon_slot_1 = empty
+						fixed_auxiliary_weapon_slot_2 = empty
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty	
+						special_type_slot_2 = empty 
+						special_type_slot_3 = empty
+					}
+				}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	botsdebuff = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+            OR = {
+			    tag = IRQ
+				tag = PER
+			}
+			is_ai = yes	
+			is_historical_focus_on = yes
+		    date < 1937.1.1
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+            add_ideas = embrodebuff
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	botsbuff = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+            OR = {
+			    tag = FIN
+			}
+			is_ai = yes	
+			is_historical_focus_on = yes
+		    date < 1937.1.1
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+            add_ideas = embrobotbuff
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexgxc = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = GXC
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = GXC
+			    transfer_troops = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexyun = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = YUN
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = YUN
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexprc = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = PRC
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = PRC
+			    transfer_troops = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexshx = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = SHX
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = SHX
+			    transfer_troops = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexxsm = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = XSM
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = XSM
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinaannexsik = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+			tag = CHI
+			is_ai = yes	
+			is_historical_focus_on = yes
+			is_in_faction_with = SIK
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+			annex_country = {
+			    target = SIK
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	chinajoinfaction = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		    always = yes
+		}
+
+		visible = {
+		    OR = {
+			    tag = YUN
+				tag = GXC
+				tag = PRC
+				tag = SHX
+				tag = XSM
+				tag = SIK
+			}
+			is_ai = yes	
+			is_historical_focus_on = yes
+			NOT = {
+			    is_in_faction_with = CHI
+			}
+			CHI = {
+			    is_faction_leader = yes
+				has_war_with = JAP
+				is_ai = yes
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+
+		complete_effect = {
+		    CHI {
+                add_to_faction = PREV
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+}

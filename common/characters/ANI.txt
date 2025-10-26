@@ -1,0 +1,23 @@
+characters = {
+
+	# AMEDEO UMBERTO ISABELLA LUIGI FILIPPO MARIA GIUSEPPE GIOVANNI DI SAVOIA-AOSTA
+	ANI_italo_balbo = { #Can become Country Leader later
+		name = ITA_italo_balbo
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_balbo_small
+				large = GFX_portrait_ITA_italo_balbo
+			}
+			civilian = {
+				large = GFX_portrait_ITA_italo_balbo_civilian
+			}
+		}
+		
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { aviation_hero }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

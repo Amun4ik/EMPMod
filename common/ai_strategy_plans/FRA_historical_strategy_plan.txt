@@ -1,0 +1,113 @@
+FRA_historical_plan = {
+	name = "France historical plan"
+	desc = "Historical behavior for France"
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_HISTORICAL
+			}
+			has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
+		}
+	}
+	abort = {
+		OR = {
+			GER = { has_completed_focus = GER_oppose_hitler }
+			GER = { has_completed_focus = GER_oppose_hitler_ww }
+			AND = {
+				ENG = { has_completed_focus = ENG_a_change_in_course }
+				NOT = { 
+					GER = { has_completed_focus = GER_oppose_hitler }
+					GER = { has_completed_focus = GER_oppose_hitler_ww }
+				}
+			}
+		}
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = DEFAULT
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_revive_the_national_bloc
+		FRA_begin_rearmament
+		FRA_laissez_faire
+		FRA_protect_the_rights_of_man
+		FRA_review_foreign_policy
+
+		FRA_buy_time
+		FRA_strengthen_government_support
+		FRA_defensive_strategems
+		FRA_economic_devolution
+		FRA_promote_entrepeneurship
+
+		FRA_stimulate_the_dynamic_market
+		FRA_go_with_britain
+		FRA_aggressive_focus
+		FRA_devalue_the_franc
+		FRA_invest_in_the_metropole
+		FRA_metropolitan_france
+
+		FRA_algerie_france
+		FRA_industrial_expansion
+		FRA_military_factories
+
+		FRA_ban_communism
+		FRA_the_blum_viollette_proposal
+		FRA_extra_research_slot
+		FRA_extra_research_slot_2
+		FRA_battle_of_maneuver
+		FRA_motorized_focus
+		FRA_mechanized_focus
+
+		FRA_army_reform
+		FRA_expand_the_citizenship
+		FRA_encourage_immigration
+
+		FRA_appeal_to_the_french_nation
+		FRA_appeal_to_overseas_territories
+		FRA_continue_the_fight
+		FRA_colonial_recruitment
+		FRA_refus_absurde
+		FRA_the_maquis
+		FRA_reach_out_to_trade_unions
+		FRA_connections_to_industrialists
+		FRA_cooperation_with_the_communists
+		FRA_the_civil_and_military_organization
+		FRA_national_council_of_the_resistance
+		
+		
+	}
+	focus_factors = {
+		FRA_right_wing_rhetoric = 0
+		FRA_leftist_rhetoric = 0
+	}
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

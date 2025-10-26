@@ -1,0 +1,20 @@
+characters = {
+
+	VOI_void = {
+		name = VOI_void
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_balbo_small
+				large = GFX_portrait_ITA_italo_balbo
+			}
+			civilian = {
+				large = GFX_portrait_sidor
+			}
+		}
+		
+		country_leader = {
+			ideology=despotism
+			expire="1965.1.1.1"
+		}
+	}
+}

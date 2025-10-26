@@ -1,0 +1,88 @@
+MON_historical_strategy_plan = {
+	name = "MON historical plan"
+	desc = "I FUCKING LOVE BE SOVIET SLAVE YEEEEE"
+
+	allowed = {
+		original_tag = MON
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		SOV = {
+			NOT = {
+			    has_government = communism
+			}	
+		}
+	}
+
+	ai_national_focuses = {
+		army_effort
+	    political_effort
+		motorization_effort
+		collectivist_ethos
+		internationalism_focus
+		motorization_effort
+		mechanization_effort
+		industrial_effort
+		construction_effort
+		construction_effort_2
+		infrastructure_effort
+		infrastructure_effort_2
+		extra_tech_slot
+		extra_tech_slot_2
+		technology_sharing
+        construction_effort_3
+		production_effort
+		production_effort_2
+		production_effort_3
+		naval_effort	
+        political_correctnes
+		indoctrination_focus
+		political_commissars
+		ideological_fanaticism
+		aviation_effort
+		doctrine_effort
+		doctrine_effort_2
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		armor = 2.0
+		artillery = 8.0
+		support_tech = 12.0
+	}
+
+	ideas = {
+		
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SOV"
+		value = 200
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 15
+	}
+
+	traits = {
+		silent_workhorse = 5
+		war_industrialist = 5	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

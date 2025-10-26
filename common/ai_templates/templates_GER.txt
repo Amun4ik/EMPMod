@@ -1,0 +1,278 @@
+armored_GER = {
+
+	available_for = {
+		GER
+	}
+	
+	role = armor
+	
+	upgrade_prio = {
+		base = 2
+	}
+
+	medium_armor_early_GER = {
+		reinforce_prio = 2
+		division_names_group = GER_Arm_01
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				OR = {
+					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis
+				}
+			}
+		}
+
+		# this is a stop-gap towards medium tanks, if deployed dont upgrade to medium tanks until we burn out our light tanks
+		can_upgrade_in_field = {
+			has_equipment = { medium_tank_chassis < 600 } 
+		}
+
+		target_template = {
+			
+			support = {
+				medium_flame_tank = 1
+				assault_engineer = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+			}
+			
+			regiments = {
+				medium_armor = 8
+				motorized = 8
+			}
+		}
+	}
+
+	medium_armor_mid_GER = {
+		division_names_group = GER_Arm_01
+		upgrade_prio = {
+			base = 1
+			
+			modifier = {
+				factor = 4
+				OR = {
+					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis
+				}
+				date > 1939.10.1
+			}
+		}
+		
+		can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 1000 }
+		}
+
+		target_template = {
+			
+			support = {
+				medium_flame_tank = 1
+				assault_engineer = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+			}
+			
+			regiments = {
+				medium_armor = 8
+				mechanized = 8
+			}
+		}
+	}
+
+	modern_armor_default_GER = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 7
+				OR = {
+					has_tech = main_battle_tank
+					has_tech = main_battle_tank_chassis
+				}
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				medium_flame_tank = 1
+				assault_engineer = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+			}
+			
+			regiments = {
+				modern_armor = 8
+				mechanized = 8
+			}
+		}
+	}
+}
+
+garrison_GER = {
+	
+	role = garrison
+
+	available_for = {
+		GER
+	}
+	upgrade_prio = {
+		factor = 25
+	}
+	garrison_GER = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 200
+		}
+		target_template = {
+			support = {
+				artillery = 1
+				anti_air = 1
+			}
+			
+			regiments = {
+				infantry = 7
+			}
+		}
+	}
+}
+	
+infantry_GER = {
+
+	available_for = {
+		GER
+	}
+	
+	role = infantry
+	
+	upgrade_prio = {
+		base = 4
+
+		modifier = {
+			factor = 4
+			NOT = {
+				has_tech = basic_medium_tank
+			}
+			NOT = {
+				has_tech = basic_medium_tank_chassis
+			}
+		}
+	}
+
+
+	infantry_default_GER = {
+	
+		upgrade_prio = {
+			base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				anti_air = 1
+				artillery = 1
+				logistics_company = 1
+				rangers_support = 1
+			}
+			
+			regiments = {
+				infantry = 9
+			}
+		}
+	}
+}
+
+mountaineers_GER = {
+
+	available_for = {
+		GER
+	}
+	
+	role = mountaineers
+	
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_mountaineers
+			}
+		}
+	}
+	
+	mountaineers_default_GER = {
+	
+		upgrade_prio = {
+			base = 2
+		}
+
+		target_template = {
+			
+			support = {
+				assault_engineer = 1
+				field_hospital = 1
+				medium_flame_tank = 1
+				logistics_company = 1
+				rangers_support = 1
+			}
+			
+			regiments = {
+				mountaineers = 16
+			}
+		}
+	}
+}
+
+marines_GER = {
+
+	available_for = {
+		GER
+	}
+	
+	role = marines
+	
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = marines
+			}
+		}
+	}
+
+	marine_default_GER = {
+	
+		upgrade_prio = {
+			base = 2
+		}
+
+		target_template = {
+			
+			support = {
+				assault_engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+				rangers_support = 1
+				medium_flame_tank = 1
+			}
+			
+			regiments = {
+				medium_armor = 3
+				marine = 13
+				
+			}
+		}
+	}
+}

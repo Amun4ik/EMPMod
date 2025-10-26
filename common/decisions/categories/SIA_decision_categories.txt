@@ -1,0 +1,18 @@
+################
+#### SIAM ####
+################
+
+####### EMBRO #######
+
+SIA_expansion = {
+	priority = 70
+
+	icon = generic_foreign_policy
+
+	allowed = {
+		original_tag = SIA
+	}
+
+	visible = {
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=1018
+	name="STATE_1018"
+	resources={
+		tungsten=2
+		steel=2
+	}
+	history = {
+		#add_core_of = CAM
+		add_claim_by = SIA
+		owner = FRA
+		victory_points = {
+			10330 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		10456 10330 10356
+	}
+	manpower=288400
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+
+	local_supplies=0.0 
+}

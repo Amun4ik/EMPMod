@@ -1,0 +1,351 @@
+## Потребовать Индокитай
+
+add_namespace = siam
+
+country_event = {
+	id = siam.1
+	title = siam.1.t
+	desc = siam.1.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+	
+	# Принять
+	option = {
+	    ai_chance = {
+			factor = 50
+			modifier = {
+			    is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		name = siam.1.a
+		SIA = {
+            country_event = { id = siam.2 hours = 16 random_hours = 8 }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1017 }
+			}
+		    SIA = {
+			    transfer_state = 1017
+            }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1018 }
+			}
+	        SIA = {
+			    transfer_state = 1018
+            }
+		}
+	}
+	# Отказать
+	option = {
+	    ai_chance = {
+			factor = 50
+		}
+		name = siam.1.b
+        custom_effect_tooltip = SIA_canleadtoborderwar
+		SIA = {
+            country_event = { id = siam.3 hours = 16 random_hours = 8 }
+		}
+	}
+}
+
+country_event = {
+	id = siam.2
+	title = siam.2.t
+	desc = siam.2.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+	
+	# сыглы
+	option = {
+		name = siam.2.a
+        add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = siam.3
+	title = siam.3.t
+	desc = siam.3.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+	
+	# Пограничный конфликт доступен
+	option = {
+		name = siam.3.a
+        custom_effect_tooltip = SIA_nowborderwar
+		set_global_flag = SIA_rejecteddemand
+	}
+	# Терпим
+	option = {
+		name = siam.3.b
+        add_war_support = -0.05
+		add_political_power = 100
+	}
+}
+
+## Победа Сиама в 1017 - Ивент для Франции.
+country_event = {
+	id = siam.4
+	title = siam.4.t
+	desc = siam.4.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.4.a
+		if = {
+			limit = {
+				ROOT = { owns_state = 1017 }
+			}
+		    SIA = {
+			    transfer_state = 1017
+            }
+		}
+        ROOT = {
+			army_experience = 5
+		    add_political_power = -10
+	    }
+	}
+}
+
+## Победа Сиама в 1017 - Ивент для Сиама.
+country_event = {
+	id = siam.5
+	title = siam.5.t
+	desc = siam.5.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.5.a
+        ROOT = {
+			army_experience = 10
+		    add_political_power = 25
+	    }
+	}
+}
+
+## Поражение Сиама в 1017 - Ивент для Франции.
+country_event = {
+	id = siam.6
+	title = siam.6.t
+	desc = siam.6.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.6.a
+
+        ROOT = {
+			army_experience = 10
+		    add_political_power = 25
+	    }
+	}
+}
+
+## Поражение Сиама в 1017 - Ивент для Сиама.
+country_event = {
+	id = siam.7
+	title = siam.7.t
+	desc = siam.7.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.7.a
+        ROOT = {
+			army_experience = 5
+		    add_political_power = -25
+			add_war_support = -0.05
+	    }
+	}
+}
+
+## Победа Сиама в 1018 - Ивент для Франции.
+country_event = {
+	id = siam.8
+	title = siam.8.t
+	desc = siam.8.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.8.a
+		if = {
+			limit = {
+				ROOT = { owns_state = 1018 }
+			}
+		    SIA = {
+			    transfer_state = 1018
+            }
+		}
+        ROOT = {
+			army_experience = 5
+		    add_political_power = -10
+	    }
+	}
+}
+
+## Победа Сиама в 1018 - Ивент для Сиама.
+country_event = {
+	id = siam.9
+	title = siam.9.t
+	desc = siam.9.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.9.a
+        ROOT = {
+			army_experience = 10
+		    add_political_power = 25
+	    }
+	}
+}
+
+## Поражение Сиама в 1018 - Ивент для Франции.
+country_event = {
+	id = siam.10
+	title = siam.10.t
+	desc = siam.10.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.10.a
+        ROOT = {
+			army_experience = 10
+		    add_political_power = 25
+	    }
+	}
+}
+
+## Поражение Сиама в 1018 - Ивент для Сиама.
+country_event = {
+	id = siam.11
+	title = siam.11.t
+	desc = siam.11.d
+	picture = GFX_report_event_japanese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.11.a
+        ROOT = {
+			army_experience = 5
+		    add_political_power = -25
+			add_war_support = -0.05
+	    }
+	}
+}
+
+## Ничего не произошло
+country_event = {
+	id = siam.12
+	title = siam.12.t
+	desc = siam.12.d
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = siam.12.a
+	}
+}
+
+country_event = {
+	id = siam.13
+	title = siam.13.t
+	desc = siam.13.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+	
+	# Принять
+	option = {
+	    ai_chance = {
+			factor = 100
+			modifier = {
+				original_tag = FRA
+			    16 = is_controlled_by = FRA #Paris has fallen
+				factor = 0
+			}
+		}
+		name = siam.13.a
+		if = {
+			limit = {
+				ROOT = { owns_state = 741 }
+			}
+		    SIA = {
+			    transfer_state = 741
+            }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 670 }
+			}
+	        SIA = {
+			    transfer_state = 670
+            }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1017 }
+			}
+	        SIA = {
+			    transfer_state = 1017
+            }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1018 }
+			}
+	        SIA = {
+			    transfer_state = 1018
+            }
+		}
+	}
+	# Отказать
+	option = {
+	    ai_chance = {
+			factor = 1
+		}
+		name = siam.13.b
+		SIA = {
+            country_event = { id = siam.14 hours = 16 random_hours = 8 }
+		}
+	}
+}
+
+country_event = {
+	id = siam.14
+	title = siam.14.t
+	desc = siam.14.d
+	picture = GFX_report_event_japanese_siam_politicians
+
+	is_triggered_only = yes
+	
+	# сыглы
+	option = {
+		name = siam.14.a
+		create_wargoal = {
+			type = take_state
+			target = FROM
+			generator = { 741 670 286 671 }
+		}
+	}
+}

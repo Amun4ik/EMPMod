@@ -1,0 +1,404 @@
+SIA_expansion = {
+	SIA_demand_indochina = {
+
+		icon = border_war
+
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 149999 }
+			868 = {
+				is_fully_controlled_by = ROOT
+			}
+			869 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			if= {
+				limit = {
+					1017 = {
+						controller = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+				1017 = {
+					controller = {
+						country_event = { id = siam.1 hours = 16 random_hours = 8 }
+					}
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = siam.1.a
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				date < 1940.1.1
+				factor = 0
+			}
+		}
+	}
+	
+	SIA_border_conflict = {
+		icon = border_war
+		allowed = {
+			original_tag = SIA
+		}
+
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 149999 }
+			1017 = {
+				controller = {
+			        NOT = {
+				        has_war_with = ROOT
+				        is_in_faction_with = ROOT
+				        has_non_aggression_pact_with = ROOT
+				        is_puppet_of = ROOT
+			        }
+			    }
+			}
+			868 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 868
+				border_state = 1017
+				size > 0
+			}
+			869 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 869
+				border_state = 1018
+				size > 0
+			}
+		}
+
+		visible = {
+			has_global_flag = SIA_rejecteddemand
+		}
+
+		highlight_states = {
+	 		highlight_state_targets = {
+				state = 1017
+				state = 1018
+				state = 868
+				state = 869
+			} 
+		}
+		
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				date < 1940.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		complete_effect = {
+			868 = {
+				save_event_target_as = SIA_attacker_state_1
+				set_state_flag = border_incident_active
+			}
+			1017 = {
+				save_event_target_as = SIA_defender_state_1
+				set_state_flag = border_incident_active
+				controller = {
+				    country_event = { id = siam.12 days = 1 }
+				    activate_targeted_decision = { target = ROOT decision = SIA_border_conflict_warning }
+				}
+			}
+			869 = {
+				save_event_target_as = SIA_attacker_state_2
+				set_state_flag = border_incident_active
+			}
+			1018 = {
+				save_event_target_as = SIA_defender_state_2
+				set_state_flag = border_incident_active
+			}
+			
+		}
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 868
+					num_provinces = 4
+					on_win = siam.5
+					on_lose = siam.7
+					on_cancel = siam.12
+				}
+				
+				defender = {
+					state = 1017
+					num_provinces = 4
+					on_win = siam.6
+					on_lose = siam.4
+					on_cancel = siam.12
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 869
+					num_provinces = 4
+					on_win = siam.9
+					on_lose = siam.11
+					on_cancel = siam.12
+				}
+				
+				defender = {
+					state = 1018
+					num_provinces = 4
+					on_win = siam.10
+					on_lose = siam.8
+					on_cancel = siam.12
+				}
+			}
+		}
+	}
+	
+	SIA_border_conflict_warning = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+		visible = { hidden_trigger = { NOT = { has_border_war_with = SIA } } }
+		cancel_if_not_visible = yes 
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+		war_with_on_remove = SIA
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+            	ROOT = {
+			    	army_experience = 5
+					add_political_power = -10
+			    }
+		    	if = {
+			    	limit = {
+				    	ROOT = { owns_state = 1017 }
+			    	}
+					SIA = {
+			        	transfer_state = 1017
+                	}
+		    	}
+		    	if = {
+			    	limit = {
+				    	ROOT = { owns_state = 1018 }
+			    	}
+					SIA = {
+			        	transfer_state = 1018
+                	}
+		    	}
+            	SIA = {
+			    	army_experience = 20
+					add_political_power = 100
+				}
+			}
+		}	
+	}
+	
+	SIA_annex_meluprei = {
+	    state_target = yes
+		icon = generic_form_nation
+		targets = {
+			state = 1017 # Omsk	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1017
+			}
+		}
+
+		available = {
+			1017 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 30
+			}
+		}
+		visible = {
+			1017 = {
+				is_owned_by = ROOT
+			}
+		}
+
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 50
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		complete_effect = {
+		}
+		
+		remove_effect = {
+			1017 = {
+				add_core_of = SIA
+				remove_claim_by = SIA
+			}
+		}
+	}
+	
+	SIA_annex_saynabuli = {
+	    state_target = yes
+		icon = generic_form_nation
+		targets = {
+			state = 1018 # Omsk	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1018
+			}
+		}
+
+		available = {
+			1018 = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				compliance > 30
+			}
+		}
+		visible = {
+			1018 = {
+				is_owned_by = ROOT
+			}
+		}
+
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 50
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		complete_effect = {
+		}
+		
+		remove_effect = {
+			1018 = {
+				add_core_of = SIA
+				remove_claim_by = SIA
+			}
+		}
+	}
+	
+	SIA_demand_laosandcambodia = {
+
+		icon = border_war
+
+		available = {
+			is_subject = no
+			OR = {
+			    AND = {
+			        has_army_manpower = { size > 149999 }
+			        1017 = {
+				        is_fully_controlled_by = ROOT
+			        }
+			        1018 = {
+				        is_fully_controlled_by = ROOT
+			        }
+				}
+				AND = {
+			        741 = {
+				        controller = {
+				                is_in_faction_with = ROOT
+			            }
+			        }
+			        670 = {
+				        controller = {
+				                is_in_faction_with = ROOT
+			            }
+			        }
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			if= {
+				limit = {
+					741 = {
+						controller = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+				741 = {
+					controller = {
+						country_event = { id = siam.13 hours = 16 random_hours = 8 }
+					}
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = siam.13.a
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

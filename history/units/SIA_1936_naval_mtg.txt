@@ -1,0 +1,82 @@
+﻿
+units= {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Royal Siamese Navy"		
+		naval_base = 7408 # Bangkok
+		task_force = {				
+			name = "Royal Siamese Navy"			
+			location = 7408 # Bangkok
+			ship = { name = "HTMS Phra Ruang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIA version_name = "Phra Ruang Class" } } }
+			ship = { name = "HTMS Trad" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIA version_name = "Trad Class" } } }
+			ship = { name = "HTMS Phuket" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIA version_name = "Trad Class" } } }
+			ship = { name = "HTMS Pattani" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIA version_name = "Trad Class" } } }
+			ship = { name = "HTMS Surasdra" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SIA version_name = "Trad Class" } } }	
+		}				
+	}
+} 
+
+instant_effect = 
+{
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_light_1
+				creator = "SIA"
+				version_name = "Trad Class"
+			}
+			requested_factories = 1
+			progress = 0.6
+			amount = 1
+		}
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_light_1
+				creator = "SIA"
+				version_name = "Trad Class"
+			}
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_light_1
+				creator = "SIA"
+				version_name = "Trad Class"
+			}
+			requested_factories = 1
+			progress = 0.4
+			amount = 3
+		}
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_cruiser_coastal_defense_ship
+				creator = "SIA"
+				version_name = "Sri Ayudhya Class"
+			}
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_cruiser_coastal_defense_ship
+				creator = "SIA"
+				version_name = "Sri Ayudhya Class"
+			}
+			requested_factories = 1
+			progress = 0.4
+			amount = 1
+		}
+		add_equipment_production = {				
+			equipment = {
+				type = ship_hull_submarine_1
+				creator = "SIA"
+				version_name = "Wilun Class"
+			}
+			requested_factories = 1
+			progress = 0.2
+			amount = 2
+		}
+}
