@@ -2983,7 +2983,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_prom_sud
-        icon = GFX_focus_FIN_coastal_defense
+        icon = GFX_focus_BEL_dam_the_consequences
         x = 2
         y = 1
 		cost = 10
@@ -3098,7 +3098,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_ucrepit_very
-        icon = GFX_focus_FIN_coastal_defense
+        icon = GFX_focus_PER_islamic_solidarity
         x = 1
         y = 1
 		cost = 10
@@ -3114,7 +3114,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_rasprostranenie
-        icon = GFX_focus_FIN_coastal_defense
+        icon = GFX_focus_generic_islamic_propaganda
         x = -1
         y = 1
 		cost = 10
@@ -3147,7 +3147,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_fasc_yaderka
-        icon = GFX_focus_FIN_coastal_defense
+        icon = GFX_focus_generic_nuclear_development
         x = 0
         y = 4
 		cost = 10
@@ -3180,7 +3180,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_nats_prov_iberia
-        icon = GFX_focus_FIN_coastal_defense
+        icon = GFX_focus_por_iberian_summit
         x = 0
         y = 2
 		cost = 10
