@@ -5,8 +5,11 @@ oob = "EGY_1936"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1
 	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
 }
 
 recruit_character = EGY_Faud_i
@@ -23,7 +26,10 @@ add_ideas = {
 	limited_conscription
 
 	# National Spirits
-	arabictraditionsegypt
+	EGY_old_fleet
+	EGY_old_air
+	EGY_old_industry
+	EGY_old_army
 
 }
 
@@ -114,3 +120,17 @@ set_popularities = {
 	communism = 12
 	neutrality = 52
 }
+
+#ARMY VARIABLE
+set_variable = { EGY_cavalry_attack_factor = 0.2 }
+set_variable = { EGY_cavalry_defence_factor = 0.2 }
+set_variable = { EGY_attrition = -0.1 }
+set_variable = { EGY_supply_consumption_factor = -0.05 } 
+set_variable = { EGY_out_of_supply_factor = -0.1 }
+set_variable = { EGY_army_org_factor = -0.1 }
+set_variable = { EGY_army_attack_factor = -0.2 }
+set_variable = { EGY_army_defence_factor = -0.2 }
+set_variable = { EGY_conscription_factor = -0.25 }
+set_variable = { JAP_research_speed_factor = -0.05 } 
+set_variable = { JAP_production_speed_arms_factory_factor = -0.1 }
+add_dynamic_modifier = { modifier = EGY_army_modifier }

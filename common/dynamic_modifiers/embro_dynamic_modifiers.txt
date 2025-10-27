@@ -21,3 +21,18 @@ JAP_militarism_modifier = { #Militarism NS
 	invasion_preparation = JAP_invasion_preparation
 	production_speed_dockyard_factor = JAP_production_speed_dockyard_factor
 }
+
+EGY_army_modifier = { # Egypt Army
+	enable = { always = yes }
+	icon = GFX_idea_tur_kemalist_army_officers_powerful_neutral
+
+	cavalry_attack_factor = EGY_cavalry_attack_factor
+	cavalry_defence_factor = EGY_cavalry_defence_factor
+	attrition = EGY_attrition
+	supply_consumption_factor = EGY_supply_consumption_factor
+	out_of_supply_factor = EGY_out_of_supply_factor
+	army_org_factor = EGY_army_org_factor
+	army_attack_factor = EGY_army_attack_factor
+	army_defence_factor = EGY_army_defence_factor
+	conscription_factor = EGY_conscription_factor
+}
