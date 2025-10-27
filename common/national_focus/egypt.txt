@@ -2831,7 +2831,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-		mutually_exclusive = { focus = EGY_fasc_war_world }
+		mutually_exclusive = { focus = EGY_fasc_war_world focus = EGY_podgotovit_allienc }
 		prerequisite = { focus = EGY_podnyat_orydia }
 		prerequisite = { focus = EGY_idel_obrobotka_raboch }
 	}
@@ -2897,7 +2897,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
 		
-		prerequisite = { focus = EGY_totaler_krieg}
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
 	}
 	
 	focus = {
@@ -2913,7 +2913,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
 		
-		prerequisite = { focus = EGY_totaler_krieg}
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
 	}
 	
 	focus = {
@@ -2963,7 +2963,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
 		
-		prerequisite = { focus = EGY_totaler_krieg}
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
 	}
 	
 	focus = {
@@ -2979,7 +2979,7 @@ focus_tree = {
         cancelable = no
         bypass_if_unavailable = no
 		
-		prerequisite = { focus = EGY_totaler_krieg}
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
 	}
 	
 	focus = {
@@ -3332,5 +3332,271 @@ focus_tree = {
 		prerequisite = { focus = EGY_zachistka_sredi_voenyh}
 		prerequisite = { focus = EGY_royal_to_pawer}
 		
+	}
+	
+	focus = {
+        id = EGY_cho_toe_konstitycia
+        icon = GFX_focus_BRA_repeale_national_security_law
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_royal_to_pawer
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_royal_to_pawer}
+		
+	}
+	
+	focus = {
+        id = EGY_the_name_of_king
+        icon = GFX_focus_SOV_zemsky_sobor
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_cho_toe_konstitycia
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_cho_toe_konstitycia}
+		prerequisite = { focus = EGY_lozhnyi_parlament}
+		prerequisite = { focus = EGY_raskoshnaya_zhizn}
+		
+	}
+	
+	focus = {
+        id = EGY_pole_experementov
+        icon = GFX_goal_generic_secret_weapon
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_raskoshnaya_zhizn
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_raskoshnaya_zhizn}
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_ger
+        icon = GFX_focus_GER_reorganize_the_wehrmacht
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ita }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_allienc_ita
+        icon = GFX_focus_BRA_joint_italian_motor_development
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_svoi_allienc
+        icon = GFX_goal_anschluss
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_afc_allienc
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 4
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_svoi_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king }
+	}
+	
+	focus = {
+        id = EGY_army_allienc
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_ger
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	}
+	
+	focus = {
+        id = EGY_axis_podlodki
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_allienc_ger
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ger }
+	}
+	
+	focus = {
+        id = EGY_allienc_ita_esminec
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_allienc_ita
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ita }
+	}
+	
+	focus = {
+        id = EGY_podgotovit_allienc
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_axis_podlodki
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_totaler_krieg }
+	    prerequisite = { focus = EGY_axis_podlodki focus = EGY_allienc_ita_esminec }prerequisite = { focus = EGY_army_allienc focus = EGY_allienc_tur }
+		
+		prerequisite = { focus = EGY_podnyat_orydia }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_soud
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_svoi_allienc }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_irq
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_svoi_allienc }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_tur
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_irq focus = EGY_allienc_soud }
+	}
+	
+	focus = {
+        id = EGY_allienc_ira
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_tur
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_tur }
+	}
+	
+	focus = {
+        id = EGY_allienc_eph
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_tur
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_tur }
 	}
 }
