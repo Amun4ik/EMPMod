@@ -1441,7 +1441,7 @@ focus_tree = {
 	 
 	 focus = {
         id = EGY_ita_liviya
-        icon = GFX_focus_ITA_ministry_of_italian_africa
+        icon = GFX_focus_generic_develop_libya
         x = 1
         y = 1
         relative_position_id = EGY_Ministerstvo_ita_africa
