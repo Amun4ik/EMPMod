@@ -8847,6 +8847,6 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_EGY_henri_curiel"
-		texturefile = "gfx/leaders/EGY/EGY_mustafa_nahas.dds"
+		texturefile = "gfx/leaders/EGY/EGY_henri_curiel.dds"
 	}
 }
