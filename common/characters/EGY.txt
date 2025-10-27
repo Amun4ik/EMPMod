@@ -1,0 +1,75 @@
+characters = {
+
+	EGY_Farouk_Muhammad_Ali = { #Can become Country Leader later
+		name = EGY_Farouk_Muhammad_Ali
+		portraits = {
+			civilian = {
+				large = GFX_EGY_farouk_i
+			}
+		}
+	}
+	
+	EGY_Faud_i = { # Will die by event
+		name = EGY_Faud_i
+		portraits = {
+			civilian = {
+				large = GFX_EGY_faud_i
+			}
+		}
+		
+		country_leader = {
+			ideology = despotism
+			traits = { staunch_monarchist popular_figurehead }
+			expire = "1936.4.28.1"
+			id = -1
+		}
+	}
+	
+	EGY_hassan_banna = {
+		name = EGY_hassan_banna
+		portraits = {
+			civilian = {
+				large = GFX_EGY_hassan_banna
+			}
+		}
+		
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { rebellious_educator }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	EGY_mustafa_nahas = {
+		name = EGY_mustafa_nahas
+		portraits = {
+			civilian = {
+				large = GFX_EGY_mustafa_nahas
+			}
+		}
+		
+		country_leader = {
+			ideology = conservatism
+			traits = { conservative_grandee }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	EGY_henri_curiel = {
+		name = EGY_henri_curiel
+		portraits = {
+			civilian = {
+				large = GFX_EGY_henri_curiel
+			}
+		}
+		
+		country_leader = {
+			ideology = marxism
+			traits = { anti_imperialist_thinker }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,34 @@
+add_namespace = egypt
+
+country_event = {
+	id = egypt.1
+	title = egypt.1.t
+	desc = egypt.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = EGY
+		date > 1936.5.1
+	}
+	
+	immediate = {
+		hidden_effect = {
+            retire_character = EGY_Faud_i
+			add_country_leader_role = {
+				character =  EGY_Farouk_Muhammad_Ali
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { hedonist }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = egypt.1.a	
+	}	
+}

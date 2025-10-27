@@ -9,6 +9,12 @@ set_technology = {
 	tech_engineers = 1
 }
 
+recruit_character = EGY_Faud_i
+recruit_character = EGY_Farouk_Muhammad_Ali
+recruit_character = EGY_hassan_banna
+recruit_character = EGY_mustafa_nahas
+recruit_character = EGY_henri_curiel
+
 # Starting Ideas
 add_ideas = {
 
@@ -107,44 +113,4 @@ set_popularities = {
 	fascism = 24
 	communism = 12
 	neutrality = 52
-}
-
-create_country_leader = {
-	name = "Muhammad Naguib"
-	desc = ""
-	picture = GFX_portrait_Muhammad_Naguib
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ahmed Husayn"
-	desc = ""
-	picture = GFX_portrait_Ahmed_Husayn
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Farouk Muhammad Ali"
-	desc = ""
-	picture = "GFX_portrait_egy_faud_i"
-	ideology = despotism
-	traits = {
-		hedonist
-	}
-}
-
-create_country_leader = {
-	name = "Hosni al-Arabi"
-	desc = ""
-	picture = GFX_portrait_Hosni_al_Arabi
-	ideology = leninism
-	traits = {
-		#
-	}
 }
