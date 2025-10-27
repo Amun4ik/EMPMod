@@ -3231,4 +3231,19 @@ focus_tree = {
 		prerequisite = { focus = EGY_fasc_yaderka focus = EGY_rakety }
 	  }
 	  
+	    focus = {
+        id = Z
+        icon = GFX_focus_IRQ_arab_free_legion
+        x = 0
+        y = 3
+		cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+		
+	  }
+	  
+	  
 }
