@@ -11,6 +11,10 @@ country_event = {
 	trigger = {
 		original_tag = EGY
 		date > 1936.5.1
+		has_country_leader = {
+			character = EGY_Faud_i
+			ruling_only = yes 
+		}
 	}
 	
 	immediate = {
@@ -22,7 +26,7 @@ country_event = {
 				country_leader = {
 					ideology = despotism
 					expire = "1965.1.1.1"
-					traits = { hedonist }
+					traits = { EGY_hedonist EGY_underage_monarch }
 				}
 			}
 		}
@@ -30,5 +34,29 @@ country_event = {
 
 	option = {
 		name = egypt.1.a	
+	}	
+}
+
+country_event = {
+	id = egypt.2
+	title = egypt.2.t
+	desc = egypt.2.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = EGY
+		date > 1937.8.1
+		has_country_leader = {
+			character = EGY_Farouk_Muhammad_Ali
+			ruling_only = yes
+		}
+	}
+	
+
+	option = {
+		name = egypt.2.a
+		remove_country_leader_trait = EGY_underage_monarch
 	}	
 }

@@ -19,7 +19,7 @@ characters = {
 		
 		country_leader = {
 			ideology = despotism
-			traits = { staunch_monarchist popular_figurehead }
+			traits = { EGY_conservativeking }
 			expire = "1936.4.28.1"
 			id = -1
 		}
@@ -35,7 +35,7 @@ characters = {
 		
 		country_leader = {
 			ideology = fascism_ideology
-			traits = { rebellious_educator }
+			traits = { EGY_islamicteacher }
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -67,7 +67,7 @@ characters = {
 		
 		country_leader = {
 			ideology = marxism
-			traits = { anti_imperialist_thinker }
+			traits = { EGY_anti_colonialist }
 			expire = "1965.1.1.1"
 			id = -1
 		}
