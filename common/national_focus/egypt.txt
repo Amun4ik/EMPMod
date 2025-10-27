@@ -191,6 +191,23 @@ focus_tree = {
         prerequisite = { focus = EGY_independt }
 
     }
+	
+    focus = {
+        id = EGY_testtestetst
+        icon = GFX_focus_generic_treaty
+        x = 4
+        y = 1
+        relative_position_id = EGY_independt
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_independt }
+
+    }
 
 	focus = {
         id = EGY_revolution
