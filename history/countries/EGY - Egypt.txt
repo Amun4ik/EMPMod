@@ -131,6 +131,6 @@ set_variable = { EGY_army_org_factor = -0.1 }
 set_variable = { EGY_army_attack_factor = -0.2 }
 set_variable = { EGY_army_defence_factor = -0.2 }
 set_variable = { EGY_conscription_factor = -0.25 }
-set_variable = { JAP_research_speed_factor = -0.05 } 
-set_variable = { JAP_production_speed_arms_factory_factor = -0.1 }
+set_variable = { EGY_research_speed_factor = -0.05 } 
+set_variable = { EGY_production_speed_arms_factory_factor = -0.1 }
 add_dynamic_modifier = { modifier = EGY_army_modifier }

@@ -35,4 +35,6 @@ EGY_army_modifier = { # Egypt Army
 	army_attack_factor = EGY_army_attack_factor
 	army_defence_factor = EGY_army_defence_factor
 	conscription_factor = EGY_conscription_factor
+	research_speed_factor = EGY_research_speed_factor
+	production_speed_arms_factory_factor = EGY_production_speed_arms_factory_factor
 }
