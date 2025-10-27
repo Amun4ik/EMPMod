@@ -119,7 +119,7 @@ focus_tree = {
     focus = {
         id = EGY_independt
         icon = GFX_focus_eng_decolonization
-        x = 4
+        x = 5
         y = 1
         relative_position_id = EGY_quostatus
         cost = 10
@@ -147,7 +147,7 @@ focus_tree = {
 		}
 		
 		offset = {
-			x = -4
+			x = -5
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -551,7 +551,7 @@ focus_tree = {
     focus = {
         id = EGY_egyptneutrality
         icon = GFX_goal_generic_neutrality_focus
-        x = 0
+        x = -1
         y = 1
         relative_position_id = EGY_empowerwafd
         cost = 10
@@ -560,7 +560,7 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        mutually_exclusive = { focus = EGY_joinallies }
+        mutually_exclusive = { focus = EGY_joinallies focus = EGY_joinaxis }
         prerequisite = { focus = EGY_empowerwafd focus = EGY_empowersultan }
 
 		completion_reward = {
@@ -572,7 +572,7 @@ focus_tree = {
     focus = {
         id = EGY_joinallies
         icon = GFX_focus_ARG_join_the_allies
-        x = 0
+        x = 3
         y = 1
         cost = 10
 		relative_position_id = EGY_empowersultan
@@ -581,15 +581,15 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        mutually_exclusive = { focus = EGY_egyptneutrality }
-        prerequisite = { focus = EGY_empowersultan focus = EGY_empowerwafd }
+        mutually_exclusive = { focus = EGY_egyptneutrality focus = EGY_joinaxis }
+        prerequisite = { focus = EGY_empowerwafd }
 
     }
 
     focus = {
         id = EGY_improveeconomy
         icon = GFX_focus_generic_industry_1
-        x = 12
+        x = 14
         y = 2
         relative_position_id = EGY_quostatus
         cost = 10
@@ -601,7 +601,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_quostatus }
 
 		offset = {
-			x = -4
+			x = -5
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -759,7 +759,7 @@ focus_tree = {
         prerequisite = { focus = EGY_quostatus }
 
 		offset = {
-			x = 3
+			x = 2
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -940,7 +940,7 @@ focus_tree = {
     focus = {
         id = EGY_nationalizesuez
         icon = GFX_focus_generic_annex_country_2
-        x = 0
+        x = -1
         y = 1
         relative_position_id = EGY_egyptneutrality
         cost = 10
@@ -949,14 +949,14 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        prerequisite = { focus = EGY_egyptneutrality }
+        prerequisite = { focus = EGY_egyptneutrality focus = EGY_joinaxis  }
 
     }
 	
     focus = {
         id = EGY_buysuez
         icon = GFX_focus_GER_customs_union
-        x = 0
+        x = -1
         y = 1
         relative_position_id = EGY_joinallies
         cost = 10
@@ -965,14 +965,31 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = no
         bypass_if_unavailable = no
-        prerequisite = { focus = EGY_joinallies }
+        prerequisite = { focus = EGY_joinallies focus = EGY_egyptneutrality }
+
+    }
+
+    focus = {
+        id = EGY_joinaxis
+        icon = GFX_focus_chi_mission_to_germany
+        x = -1
+        y = 1
+        relative_position_id = EGY_empowersultan
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = no
+        continue_if_invalid = no
+        cancelable = no
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_egyptneutrality focus = EGY_joinallies }
+        prerequisite = { focus = EGY_empowersultan }
 
     }
 
     focus = {
         id = EGY_egyptrepublic
         icon = GFX_focus_NOR_send_the_king_back_to_denmark
-        x = 2
+        x = 3
         y = 1
         relative_position_id = EGY_empowerwafd
         cost = 10
@@ -1006,7 +1023,7 @@ focus_tree = {
     focus = {
         id = EGY_panarabicrepublic
         icon = GFX_focus_IRQ_unite_mashriq
-        x = 1
+        x = 0
         y = 1
         relative_position_id = EGY_demandsyria
         cost = 10
@@ -1023,7 +1040,7 @@ focus_tree = {
     focus = {
         id = EGY_restoresultanat
         icon = GFX_focus_rom_royal_dictatorship
-        x = -2
+        x = -3
         y = 1
         relative_position_id = EGY_empowersultan
         cost = 10
@@ -1055,9 +1072,9 @@ focus_tree = {
     }
 	
     focus = {
-        id = EGY_attacklybia
-        icon = GFX_focus_attack_italy
-        x = -1
+        id = EGY_buylibya
+        icon = GFX_focus_generic_develop_libya
+        x = 0
         y = 1
         relative_position_id = EGY_legacyofmamluks
         cost = 10
@@ -1074,7 +1091,7 @@ focus_tree = {
     focus = {
         id = EGY_assistfrombrit
         icon = GFX_focus_chi_british_cooperation
-        x = -1
+        x = 1
         y = 1
         relative_position_id = EGY_buysuez
         cost = 10
@@ -1092,7 +1109,7 @@ focus_tree = {
     focus = {
         id = EGY_assistfromusa
         icon = GFX_focus_generic_befriend_usa
-        x = 1
+        x = -1
         y = 1
         relative_position_id = EGY_buysuez
         cost = 10
@@ -1110,7 +1127,7 @@ focus_tree = {
     focus = {
         id = EGY_assistfromsoviet
         icon = GFX_focus_chi_mission_to_the_soviet_union
-        x = 1
+        x = -1
         y = 1
         relative_position_id = EGY_nationalizesuez
         cost = 10
@@ -1128,7 +1145,7 @@ focus_tree = {
     focus = {
         id = EGY_destroycolonizers
         icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
-        x = 1
+        x = -1
         y = 1
         relative_position_id = EGY_assistfromusa
         cost = 10
@@ -1145,7 +1162,7 @@ focus_tree = {
     focus = {
         id = EGY_communistthreat
         icon = GFX_focus_attack_soviet
-        x = -1
+        x = 1
         y = 1
         relative_position_id = EGY_assistfromusa
         cost = 10
@@ -1162,7 +1179,7 @@ focus_tree = {
     focus = {
         id = EGY_britishfleet
         icon = GFX_focus_GER_high_seas_fleet
-        x = -1
+        x = 1
         y = 1
         relative_position_id = EGY_assistfrombrit
         cost = 10
@@ -1179,7 +1196,7 @@ focus_tree = {
     focus = {
         id = EGY_soviettanks
         icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-        x = 1
+        x = -1
         y = 1
         relative_position_id = EGY_assistfromsoviet
         cost = 10
@@ -1196,7 +1213,7 @@ focus_tree = {
     focus = {
         id = EGY_destroyfascism
         icon = GFX_focus_generic_anti_fascist_diplomacy
-        x = 1
+        x = -1
         y = 1
         relative_position_id = EGY_communistthreat
         cost = 10
