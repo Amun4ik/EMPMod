@@ -10,7 +10,7 @@ country_event = {
 	
 	trigger = {
 		original_tag = EGY
-		date > 1936.5.1
+		date > 1936.4.1
 		has_country_leader = {
 			character = EGY_Faud_i
 			ruling_only = yes 
@@ -47,7 +47,7 @@ country_event = {
 	
 	trigger = {
 		original_tag = EGY
-		date > 1937.8.1
+		date > 1937.7.1
 		has_country_leader = {
 			character = EGY_Farouk_Muhammad_Ali
 			ruling_only = yes
