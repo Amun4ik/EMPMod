@@ -1934,7 +1934,7 @@ focus_tree = {
 	 
 	focus = {
         id = EGY_kabinet_ministrov
-        icon = GFX_focus_SWI_helvetic_junta
+        icon = GFX_focus_ETH_re-convene_the_parliament
         x = 2
         y = 1
         relative_position_id = EGY_fasc_panarabic
@@ -2760,7 +2760,7 @@ focus_tree = {
 
 	focus = {
         id = EGY_idel_obrobotka_raboch
-        icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+        icon = GFX_focus_AFG_promote_the_counter_elite
         x = 1
         y = 1
 		cost = 10
@@ -3474,7 +3474,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_army_allienc
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_RAJ_lions_of_the_great_war
         x = 1
         y = 1
 		cost = 10
@@ -3490,7 +3490,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_axis_podlodki
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_goal_generic_wolf_pack
         x = 0
         y = 2
 		cost = 10
@@ -3506,7 +3506,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_ita_esminec
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_generic_destroyer
         x = 0
         y = 2
 		cost = 10
@@ -3522,7 +3522,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_podgotovit_allienc
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_AFG_scavenging 
         x = 1
         y = 1
 		cost = 10
@@ -3541,7 +3541,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_soud
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_IRQ_a_new_caliph
         x = -1
         y = 1
 		cost = 10
@@ -3558,7 +3558,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_irq
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_IRQ_party_of_national_brotherhood
         x = 1
         y = 1
 		cost = 10
@@ -3575,7 +3575,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_tur
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_generic_befriend_turkey
         x = 0
         y = 2
 		cost = 10
@@ -3591,7 +3591,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_ira
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_PER_elevate_the_iran_party
         x = -1
         y = 1
 		cost = 10
@@ -3607,7 +3607,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_allienc_eph
-        icon = GFX_focus_spr_masters_of_our_own_fate
+        icon = GFX_focus_ETH_the_king_of_kings
         x = 1
         y = 1
 		cost = 10
