@@ -29,6 +29,14 @@ on_actions = {
 			SOV = {
 				give_resource_rights = { receiver = JAP state = 655 }
 			}
+			883 = { add_claim_by = EGY }
+			551 = { add_claim_by = EGY }
+			767 = { add_claim_by = EGY }
+			886 = { add_claim_by = EGY }
+			549 = { add_claim_by = EGY }
+			887 = { add_claim_by = EGY }
+			885 = { add_claim_by = EGY }
+			884 = { add_claim_by = EGY }
 		}
 	}
 
