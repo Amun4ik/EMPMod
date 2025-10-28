@@ -3669,4 +3669,99 @@ focus_tree = {
 	    prerequisite = { focus = EGY_afc_allienc }
 	}
 	
+	focus = {
+        id = EGY_fasc_vostanovlenie
+        icon = GFX_goal_generic_fortify_city
+        x = 10
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_king focus = EGY_fasc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_povysit_nalog
+        icon = GFX_goal_generic_fortify_city
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_ponizit_nalog
+        icon = GFX_goal_generic_fortify_city
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_ozivit_SH
+        icon = GFX_goal_generic_fortify_city
+        x = -3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_import_SH
+        icon = GFX_goal_generic_fortify_city
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ozivit_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_ozivit_SH }
+	}
+	
+	focus = {
+        id = EGY_legk
+        icon = GFX_goal_generic_fortify_city
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ozivit_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_ozivit_SH }
+	}
 }
