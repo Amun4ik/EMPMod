@@ -13,10 +13,6 @@ leader_traits = {
 		random = no
 		stability_factor = -0.1
 		consumer_goods_factor = 0.05
-
-		ai_will_do = {
-			factor = 1
-		}
 	}
 	
 	EGY_conservativeking = {
@@ -24,9 +20,6 @@ leader_traits = {
 		stability_factor = 0.1
 		neutrality_drift = 0.02
 
-		ai_will_do = {
-			factor = 1
-		}
 	}
 	
 	EGY_islamicteacher = {
@@ -35,9 +28,6 @@ leader_traits = {
 		fascism_drift = 0.02
 		conscription_factor = 0.05
 
-		ai_will_do = {
-			factor = 1
-		}
 	}
 	
 	EGY_anti_colonialist = {
@@ -49,8 +39,14 @@ leader_traits = {
 		communism_drift = 0.02
 		resistance_target = 0.1
 
-		ai_will_do = {
-			factor = 1
-		}
+	}
+	
+	EGY_provisional_government = {
+		random = no
+		sprite = 13
+
+		political_power_factor = -0.15
+		stability_factor = -0.1
+
 	}
 }
