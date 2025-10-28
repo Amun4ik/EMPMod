@@ -19,9 +19,9 @@ focus_tree = {
         y = 0
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		mutually_exclusive = { focus = EGY_revolution }
 
@@ -41,7 +41,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power = 25
+			add_political_power = 120
 
 			if = {
 				limit = {
@@ -64,9 +64,9 @@ focus_tree = {
         relative_position_id = EGY_quostatus
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_independt }
         prerequisite = { focus = EGY_quostatus }
@@ -101,6 +101,13 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = EGY_loyaltobritish
+				}
+                EGY_engfriendshipup = yes
+			}
 
 			if = {
 				limit = {
@@ -124,9 +131,9 @@ focus_tree = {
         relative_position_id = EGY_quostatus
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_poslushanie }
         prerequisite = { focus = EGY_quostatus }
@@ -183,9 +190,9 @@ focus_tree = {
         relative_position_id = EGY_independt
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_independt }
@@ -200,9 +207,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_quostatus
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_quostatus }
 
@@ -268,9 +275,9 @@ focus_tree = {
         relative_position_id = EGY_revolution
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_bratyamusulmane }
         prerequisite = { focus = EGY_revolution }
@@ -327,9 +334,9 @@ focus_tree = {
         relative_position_id = EGY_revolution
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_arabicsocialism }
         prerequisite = { focus = EGY_revolution }
@@ -386,12 +393,26 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_poslushanie
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_askforsudan }
         prerequisite = { focus = EGY_poslushanie }
+
+        completion_reward = {
+            add_political_power = -75
+            add_stability = 0.05
+			every_state = {
+				limit = {
+					is_claimed_by = ROOT
+				}
+				remove_claim_by = ROOT
+			}
+            ENG = {
+                EGY_engfriendshipup = yes
+            }
+        }
 
     }
 
@@ -403,9 +424,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_poslushanie
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_rejectsudandemands }
         prerequisite = { focus = EGY_poslushanie }
@@ -420,9 +441,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_askforsudan
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_guaranteesuezforbrit }
         prerequisite = { focus = EGY_askforsudan focus = EGY_rejectsudandemands }
@@ -437,9 +458,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_rejectsudandemands
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_askforsuez }
         prerequisite = { focus = EGY_rejectsudandemands focus = EGY_askforsudan }
@@ -454,9 +475,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_askforsuez
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_defendbritishcolonies }
         prerequisite = { focus = EGY_askforsuez focus = EGY_guaranteesuezforbrit }
@@ -471,9 +492,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_guaranteesuezforbrit
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_askforpalestine }
         prerequisite = { focus = EGY_guaranteesuezforbrit focus = EGY_askforsuez }
@@ -488,9 +509,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_poslushanie
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_defendbritishcolonies focus = EGY_askforpalestine }
@@ -505,9 +526,9 @@ focus_tree = {
         relative_position_id = EGY_AngloEgyptDogovor
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_empowersultan }
         prerequisite = { focus = EGY_AngloEgyptDogovor }
@@ -522,9 +543,9 @@ focus_tree = {
         relative_position_id = EGY_AngloEgyptDogovor
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_empowerwafd }
         prerequisite = { focus = EGY_AngloEgyptDogovor }
@@ -539,9 +560,9 @@ focus_tree = {
         relative_position_id = EGY_empowerwafd
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_joinallies focus = EGY_joinaxis }
         prerequisite = { focus = EGY_empowerwafd focus = EGY_empowersultan }
@@ -560,9 +581,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_empowersultan
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_egyptneutrality focus = EGY_joinaxis }
         prerequisite = { focus = EGY_empowerwafd }
@@ -577,9 +598,9 @@ focus_tree = {
         relative_position_id = EGY_quostatus
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		prerequisite = { focus = EGY_quostatus }
 
@@ -615,9 +636,9 @@ focus_tree = {
         relative_position_id = EGY_improveeconomy
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_improveeconomy }
@@ -632,9 +653,9 @@ focus_tree = {
         relative_position_id = EGY_establishfreetrade
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_establishfreetrade }
@@ -649,9 +670,9 @@ focus_tree = {
         relative_position_id = EGY_improveeconomy
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_improveeconomy }
@@ -666,9 +687,9 @@ focus_tree = {
         relative_position_id = EGY_improveeconomy
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_improveeconomy }
@@ -683,9 +704,9 @@ focus_tree = {
         relative_position_id = EGY_centreoftrade
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_centreoftrade }
@@ -700,9 +721,9 @@ focus_tree = {
         relative_position_id = EGY_conquerthesands
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_conquerthesands }
@@ -717,9 +738,9 @@ focus_tree = {
         relative_position_id = EGY_civilisationofnil
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_civilisationofnil }
@@ -734,9 +755,9 @@ focus_tree = {
         relative_position_id = EGY_quostatus
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_quostatus }
@@ -773,9 +794,9 @@ focus_tree = {
         relative_position_id = EGY_armyofegypt
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_armyofegypt }
@@ -790,9 +811,9 @@ focus_tree = {
         relative_position_id = EGY_armyofegypt
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_armyofegypt }
@@ -807,9 +828,9 @@ focus_tree = {
         relative_position_id = EGY_armyofegypt
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_armyofegypt }
@@ -824,9 +845,9 @@ focus_tree = {
         relative_position_id = EGY_forfifyelalamein
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_forfifyelalamein }
@@ -841,9 +862,9 @@ focus_tree = {
         relative_position_id = EGY_establishartillellyforces
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_establishartillellyforces }
@@ -858,9 +879,9 @@ focus_tree = {
         relative_position_id = EGY_desertsupplies
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_desertsupplies }
@@ -876,9 +897,9 @@ focus_tree = {
         relative_position_id = EGY_establishaviation
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_establishaviation }
@@ -893,9 +914,9 @@ focus_tree = {
         relative_position_id = EGY_tanksindesert
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_navalaviation }
@@ -911,9 +932,9 @@ focus_tree = {
         relative_position_id = EGY_desertsupplies
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_desertsupplies }
@@ -928,9 +949,9 @@ focus_tree = {
         relative_position_id = EGY_egyptneutrality
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         prerequisite = { focus = EGY_egyptneutrality focus = EGY_joinaxis  }
 
@@ -944,9 +965,9 @@ focus_tree = {
         relative_position_id = EGY_joinallies
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         prerequisite = { focus = EGY_joinallies focus = EGY_egyptneutrality }
 
@@ -960,9 +981,9 @@ focus_tree = {
         relative_position_id = EGY_empowersultan
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_egyptneutrality focus = EGY_joinallies }
         prerequisite = { focus = EGY_empowersultan }
@@ -977,9 +998,9 @@ focus_tree = {
         relative_position_id = EGY_empowerwafd
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_empowerwafd }
@@ -994,9 +1015,9 @@ focus_tree = {
         relative_position_id = EGY_egyptrepublic
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_egyptrepublic }
@@ -1011,9 +1032,9 @@ focus_tree = {
         relative_position_id = EGY_demandsyria
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_demandsyria }
@@ -1028,9 +1049,9 @@ focus_tree = {
         relative_position_id = EGY_empowersultan
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_empowersultan }
@@ -1045,9 +1066,9 @@ focus_tree = {
         relative_position_id = EGY_restoresultanat
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_restoresultanat }
@@ -1062,9 +1083,9 @@ focus_tree = {
         relative_position_id = EGY_legacyofmamluks
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_legacyofmamluks }
@@ -1079,9 +1100,9 @@ focus_tree = {
         relative_position_id = EGY_buysuez
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_buysuez }
@@ -1097,9 +1118,9 @@ focus_tree = {
         relative_position_id = EGY_buysuez
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_buysuez focus = EGY_nationalizesuez }
@@ -1115,9 +1136,9 @@ focus_tree = {
         relative_position_id = EGY_nationalizesuez
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_nationalizesuez }
@@ -1133,9 +1154,9 @@ focus_tree = {
         relative_position_id = EGY_assistfromusa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_assistfromsoviet focus = EGY_assistfromusa }
@@ -1150,9 +1171,9 @@ focus_tree = {
         relative_position_id = EGY_assistfromusa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_assistfrombrit focus = EGY_assistfromusa }
@@ -1167,9 +1188,9 @@ focus_tree = {
         relative_position_id = EGY_assistfrombrit
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_assistfrombrit }
@@ -1184,9 +1205,9 @@ focus_tree = {
         relative_position_id = EGY_assistfromsoviet
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_assistfromsoviet }
@@ -1201,9 +1222,9 @@ focus_tree = {
         relative_position_id = EGY_communistthreat
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_communistthreat focus = EGY_destroycolonizers }
@@ -1218,9 +1239,9 @@ focus_tree = {
         relative_position_id = EGY_fundwars
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_fundwars }
@@ -1235,9 +1256,9 @@ focus_tree = {
         relative_position_id = EGY_alexandriawharfs
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_alexandriawharfs }
@@ -1252,7 +1273,7 @@ focus_tree = {
 		relative_position_id = EGY_improveeconomy
 		cost = 10
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = yes = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1272,7 +1293,7 @@ focus_tree = {
 
 		cost = 10
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = yes = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1295,7 +1316,7 @@ focus_tree = {
 			num_of_factories > 34
 		}
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = yes = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1314,9 +1335,9 @@ focus_tree = {
         relative_position_id = EGY_improvesudan
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_improvesudan }
@@ -1334,9 +1355,9 @@ focus_tree = {
         relative_position_id = EGY_armyofegypt
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_armyofegypt }
@@ -1351,9 +1372,9 @@ focus_tree = {
         relative_position_id = EGY_alexandrianfleet
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_alexandrianfleet }
@@ -1368,9 +1389,9 @@ focus_tree = {
         relative_position_id = EGY_buyshipsfrombritain
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_buyshipsfrombritain }
@@ -1385,9 +1406,9 @@ focus_tree = {
         relative_position_id = EGY_navalaviation
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_buyshipsfrombritain }
@@ -1403,9 +1424,9 @@ focus_tree = {
         relative_position_id = EGY_bratyamusulmane
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_bratyamusulmane }
@@ -1420,9 +1441,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_poslushanie
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_poslushanie }
@@ -1437,9 +1458,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_poslushanie
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_poslushanie }
@@ -1454,9 +1475,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_joincommonwealth
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_joincommonwealth }
@@ -1471,7 +1492,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = EGY_militarycooperation
 		cost = 10
-		cancel_if_invalid = yes
+		cancel_if_invalid = yes = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
@@ -1488,9 +1509,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_british_investment
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_british_investment }
@@ -1505,9 +1526,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_britishmio
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_britishmio }
@@ -1522,9 +1543,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_britishresources
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_britishresources focus = EGY_joint_air_training_scheme }
@@ -1539,9 +1560,9 @@ focus_tree = {
         cost = 10
 		relative_position_id = EGY_bastionofempire
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_bastionofempire }
@@ -1557,9 +1578,9 @@ focus_tree = {
         relative_position_id = EGY_arabicsocialism
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_arabicsocialism }
@@ -1574,9 +1595,9 @@ focus_tree = {
         relative_position_id = EGY_arabicsocialism
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_arabicsocialism }
@@ -1591,9 +1612,9 @@ focus_tree = {
         relative_position_id = EGY_bratyamusulmane
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_pravym }
         prerequisite = { focus = EGY_bratyamusulmane }
@@ -1608,9 +1629,9 @@ focus_tree = {
         relative_position_id = EGY_arabicsocialism
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_levym }
         prerequisite = { focus = EGY_arabicsocialism }
@@ -1625,9 +1646,9 @@ focus_tree = {
         relative_position_id = EGY_revolution
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_udar_po_pravym focus = EGY_udar_po_levym }
         prerequisite = { focus = EGY_arabicsocialism focus = EGY_bratyamusulmane }
@@ -1665,9 +1686,9 @@ focus_tree = {
         relative_position_id = EGY_bratyamusulmane
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_bratyamusulmane }
@@ -1682,9 +1703,9 @@ focus_tree = {
         relative_position_id = EGY_bratyamusulmane
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_bratyamusulmane }
@@ -1699,9 +1720,9 @@ focus_tree = {
         relative_position_id = EGY_collectvolunteers
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_collectvolunteers }
@@ -1719,9 +1740,9 @@ focus_tree = {
         relative_position_id = EGY_GER_eqveepment
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_GER_eqveepment }
@@ -1734,9 +1755,9 @@ focus_tree = {
         relative_position_id = EGY_obedinit_generalov
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_obedinit_generalov }
@@ -1750,9 +1771,9 @@ focus_tree = {
         relative_position_id = EGY_arabicsocialism
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_arabicsocialism }
@@ -1766,9 +1787,9 @@ focus_tree = {
         relative_position_id = EGY_molodye_oficery
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
         prerequisite = { focus = EGY_molodye_oficery }
@@ -1783,9 +1804,9 @@ focus_tree = {
         relative_position_id = EGY_international_brigad
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_international_brigad }
@@ -1799,9 +1820,9 @@ focus_tree = {
         relative_position_id = EGY_opolchenie
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_molodye_oficery }
@@ -1817,9 +1838,9 @@ focus_tree = {
         relative_position_id = EGY_vostanie
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_soc_panarabic focus = EGY_SOV_alienc }
         prerequisite = { focus = EGY_vostanie }
@@ -1834,9 +1855,9 @@ focus_tree = {
         relative_position_id = EGY_vostanie
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_soc_dem focus = EGY_SOV_alienc }
         prerequisite = { focus = EGY_vostanie }
@@ -1851,9 +1872,9 @@ focus_tree = {
         relative_position_id = EGY_vostanie
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_soc_dem focus = EGY_soc_panarabic }
         prerequisite = { focus = EGY_vostanie }
@@ -1868,9 +1889,9 @@ focus_tree = {
         relative_position_id = EGY_Pytch
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_fasc_king }
         prerequisite = { focus = EGY_Pytch }
@@ -1885,9 +1906,9 @@ focus_tree = {
         relative_position_id = EGY_Pytch
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_Asix focus = EGY_fasc_king }
         prerequisite = { focus = EGY_Pytch }
@@ -1902,9 +1923,9 @@ focus_tree = {
         relative_position_id = EGY_Pytch
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_Asix }
         prerequisite = { focus = EGY_Pytch }
@@ -1919,9 +1940,9 @@ focus_tree = {
         relative_position_id = EGY_fasc_panarabic
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_fasc_panarabic focus = EGY_fasc_king }
@@ -1935,9 +1956,9 @@ focus_tree = {
         relative_position_id = EGY_fasc_panarabic
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_fasc_panarabic }
@@ -1951,9 +1972,9 @@ focus_tree = {
         relative_position_id = EGY_Asix
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_Asix }
@@ -1967,9 +1988,9 @@ focus_tree = {
         relative_position_id = EGY_Asix
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_Asix }
@@ -1983,9 +2004,9 @@ focus_tree = {
         relative_position_id = EGY_Asix
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_Asix }
@@ -1999,9 +2020,9 @@ focus_tree = {
 		relative_position_id = EGY_compromis
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
      
         prerequisite = { focus = EGY_Pytch focus = EGY_vostanie }
@@ -2015,9 +2036,9 @@ focus_tree = {
         relative_position_id = EGY_italia_investory
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_vassal_ger }
         prerequisite = { focus = EGY_italia_investory }
@@ -2031,9 +2052,9 @@ focus_tree = {
         relative_position_id = EGY_germani_investory 
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_vassal_ita }
         prerequisite = { focus = EGY_germani_investory }
@@ -2047,9 +2068,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_vassal_ger focus = EGY_vassal_ita }
@@ -2063,9 +2084,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ita
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_vassal_ita }
@@ -2079,9 +2100,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_vassal_ger }
@@ -2095,9 +2116,9 @@ focus_tree = {
         relative_position_id = EGY_Asix
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Asix }
@@ -2111,9 +2132,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Ministerstvo_ita_africa }
@@ -2127,9 +2148,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Ministerstvo_ita_africa }
@@ -2143,9 +2164,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Ministerstvo_ita_africa }
@@ -2159,9 +2180,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Ministerstvo_ita_africa }
@@ -2176,9 +2197,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_Ministerstvo_ita_africa }
@@ -2194,9 +2215,9 @@ focus_tree = {
         relative_position_id = EGY_Ministerstvo_ita_africa
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
         prerequisite = { focus = EGY_ita_aircraft }
@@ -2213,9 +2234,9 @@ focus_tree = {
         relative_position_id = EGY_ita_verf
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ita_verf }
@@ -2229,9 +2250,9 @@ focus_tree = {
         relative_position_id = EGY_ita_liviya
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ita_liviya }
@@ -2245,9 +2266,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_vassal_ger }
@@ -2261,9 +2282,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_vassal_ger }
@@ -2277,9 +2298,9 @@ focus_tree = {
         relative_position_id = EGY_ger_tyazh_prom_1
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_tyazh_prom_1 }
@@ -2293,9 +2314,9 @@ focus_tree = {
         relative_position_id = EGY_arii_teori
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_arii_teori }
@@ -2310,9 +2331,9 @@ focus_tree = {
         relative_position_id = EGY_ger_legkiy_prom_1
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_legkiy_prom_1 }
@@ -2326,9 +2347,9 @@ focus_tree = {
         relative_position_id = EGY_ger_legkiy_prom_1
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_legkiy_prom_1 }
@@ -2343,9 +2364,9 @@ focus_tree = {
         relative_position_id = EGY_vassal_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_vassal_ger }
@@ -2359,9 +2380,9 @@ focus_tree = {
         relative_position_id = EGY_ger_neft
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_neft }
@@ -2376,9 +2397,9 @@ focus_tree = {
         relative_position_id = EGY_ger_neft
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_neft }
@@ -2393,9 +2414,9 @@ focus_tree = {
         relative_position_id = EGY_ger_colba
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_neft }
@@ -2411,9 +2432,9 @@ focus_tree = {
         relative_position_id = EGY_tanks_ger
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_tanks_ger }
@@ -2430,9 +2451,9 @@ focus_tree = {
         relative_position_id = EGY_ger_legkiy_prom_2
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_legkiy_prom_2}
@@ -2447,9 +2468,9 @@ focus_tree = {
         relative_position_id = EGY_ger_army
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_tanks_ger }
@@ -2465,9 +2486,9 @@ focus_tree = {
         relative_position_id = EGY_zhemchuzhina_ita
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_northern_french_africa }
@@ -2483,9 +2504,9 @@ focus_tree = {
         relative_position_id = EGY_ger_tyazh_prom_2
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_tyazh_prom_2 }
@@ -2499,9 +2520,9 @@ focus_tree = {
         relative_position_id = EGY_ger_neft
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_neft }
@@ -2515,9 +2536,9 @@ focus_tree = {
         relative_position_id = EGY_ger_privyshe_vsego
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ger_privyshe_vsego }
@@ -2532,9 +2553,9 @@ focus_tree = {
         relative_position_id = EGY_compromis
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_Pytch focus = EGY_vostanie  }
@@ -2548,9 +2569,9 @@ focus_tree = {
         relative_position_id = EGY_nats_voz
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_nats_voz focus = EGY_italia_investory }
@@ -2564,9 +2585,9 @@ focus_tree = {
         relative_position_id = EGY_nats_voz
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_nats_voz }
@@ -2580,9 +2601,9 @@ focus_tree = {
         relative_position_id = EGY_nats_voz
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_nats_voz focus = EGY_cult_of_kings }  
@@ -2597,9 +2618,9 @@ focus_tree = {
         relative_position_id = EGY_islam_cult
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_ucrepit_vlast }
@@ -2615,9 +2636,9 @@ focus_tree = {
         relative_position_id = EGY_fasc_king
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_fasc_king }
@@ -2631,9 +2652,9 @@ focus_tree = {
         relative_position_id = EGY_islam_cult
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         
 		prerequisite = { focus = EGY_islam_cult }
@@ -2648,9 +2669,9 @@ focus_tree = {
         relative_position_id = EGY_odyn_narod_odna_strana_odyn_vozhdy
         cost = 10
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_the_new_repyblica }
 		prerequisite = { focus = EGY_odyn_narod_odna_strana_odyn_vozhdy }
@@ -2665,9 +2686,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_odyn_narod_odna_strana_odyn_vozhdy
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_king_maryonetka }
 		prerequisite = { focus = EGY_odyn_narod_odna_strana_odyn_vozhdy }
@@ -2681,9 +2702,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_new_repyblica
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
@@ -2697,9 +2718,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_king_maryonetka
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_king_maryonetka }
@@ -2713,9 +2734,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_king_ukaz
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_king_ukaz }
@@ -2729,9 +2750,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_new_repyblica
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_the_new_repyblica }
@@ -2745,9 +2766,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_nats_revolution
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_nats_revolution }
@@ -2762,9 +2783,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_ital_model_economic
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_ital_model_economic }
@@ -2778,9 +2799,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_ital_model_economic
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_ital_model_economic }
@@ -2794,9 +2815,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_voenaya_propoganda
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_voenaya_propoganda }
@@ -2811,9 +2832,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_voenaya_propoganda
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		mutually_exclusive = { focus = EGY_totaler_krieg }
 		prerequisite = { focus = EGY_podnyat_orydia }
@@ -2827,9 +2848,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_idel_obrobotka_raboch
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		mutually_exclusive = { focus = EGY_fasc_war_world focus = EGY_podgotovit_allienc }
 		prerequisite = { focus = EGY_podnyat_orydia }
@@ -2844,9 +2865,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_world
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
@@ -2860,9 +2881,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_world
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
@@ -2876,9 +2897,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_world
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
@@ -2892,9 +2913,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_totaler_krieg
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
@@ -2908,9 +2929,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_totaler_krieg
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
@@ -2924,9 +2945,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_fra
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_fra }
@@ -2940,9 +2961,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_uk
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_fra }
@@ -2958,9 +2979,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_totaler_krieg
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
@@ -2974,9 +2995,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_totaler_krieg
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
@@ -2990,9 +3011,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3006,9 +3027,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3022,9 +3043,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3038,9 +3059,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3054,9 +3075,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3071,9 +3092,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_unaitet_arabia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_unaitet_arabia }
@@ -3088,9 +3109,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_podnyat_orydia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_podnyat_orydia }
@@ -3104,9 +3125,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_sobrat_majahed
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_sobrat_majahed }
@@ -3121,9 +3142,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_jihad
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_jihad }
@@ -3137,9 +3158,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_jihad
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_jihad }
@@ -3153,9 +3174,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_ira
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_ira }
@@ -3170,9 +3191,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_jihad
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_jihad }
@@ -3187,9 +3208,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_ita
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_ita }
@@ -3203,9 +3224,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_war_spain
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_spain }
@@ -3219,9 +3240,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_prom_alzh
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_prom_alzh }
@@ -3239,9 +3260,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_ecomic_gegemon
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_war_spain }
@@ -3256,9 +3277,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_cult_of_kings
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_cult_of_kings }
@@ -3273,9 +3294,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_cult_of_kings
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_cult_of_kings }
@@ -3290,9 +3311,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_royal_to_pawer
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_royal_to_pawer }
@@ -3307,9 +3328,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_fasc_king
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_fasc_king }
@@ -3324,9 +3345,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_zachistka_sredi_voenyh
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_zachistka_sredi_voenyh}
@@ -3342,9 +3363,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_royal_to_pawer
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_royal_to_pawer}
@@ -3359,9 +3380,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_cho_toe_konstitycia
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_cho_toe_konstitycia}
@@ -3378,9 +3399,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_raskoshnaya_zhizn
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_raskoshnaya_zhizn}
@@ -3395,9 +3416,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_name_of_king
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ita }
 	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
@@ -3411,9 +3432,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_name_of_king
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ger }
 	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
@@ -3427,9 +3448,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_name_of_king
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
 	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
@@ -3443,9 +3464,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_the_name_of_king
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 	    mutually_exclusive = { focus = EGY_svoi_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
 	    prerequisite = { focus = EGY_the_name_of_king }
@@ -3459,9 +3480,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_allienc_ger
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
 	    prerequisite = { focus = EGY_allienc_ita focus = EGY_allienc_ger }
@@ -3475,9 +3496,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_allienc_ger
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
 	    prerequisite = { focus = EGY_allienc_ger }
@@ -3491,9 +3512,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_allienc_ita
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 
 	    prerequisite = { focus = EGY_allienc_ita }
@@ -3507,9 +3528,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_axis_podlodki
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_totaler_krieg }
 	    prerequisite = { focus = EGY_axis_podlodki focus = EGY_allienc_ita_esminec } prerequisite = { focus = EGY_army_allienc focus = EGY_allienc_tur }
@@ -3526,9 +3547,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_svoi_allienc
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_svoi_allienc }
@@ -3543,9 +3564,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_svoi_allienc
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_svoi_allienc }
@@ -3560,9 +3581,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_svoi_allienc
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_allienc_irq focus = EGY_allienc_soud }
@@ -3576,9 +3597,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_allienc_tur
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_allienc_tur }
@@ -3592,9 +3613,9 @@ focus_tree = {
 		cost = 10
         relative_position_id = EGY_allienc_tur
         available_if_capitulated = no
-        cancel_if_invalid = no
+        cancel_if_invalid = yes
         continue_if_invalid = no
-        cancelable = no
+        cancelable = yes
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_allienc_tur }
