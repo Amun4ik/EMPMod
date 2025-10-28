@@ -3671,7 +3671,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_fasc_vostanovlenie
-        icon = GFX_goal_generic_fortify_city
+        icon = GFX_focus_generic_concessions
         x = 10
         y = 1
 		cost = 10
@@ -3687,23 +3687,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_povysit_nalog
-        icon = GFX_goal_generic_fortify_city
-        x = -1
-        y = 1
-		cost = 10
-        relative_position_id = EGY_fasc_vostanovlenie
-        available_if_capitulated = no
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        cancelable = yes
-        bypass_if_unavailable = no
-		
-	    prerequisite = { focus = EGY_fasc_vostanovlenie }
-	}
-	
-	focus = {
-        id = EGY_ponizit_nalog
-        icon = GFX_goal_generic_fortify_city
+        icon = GFX_focus_hol_abandon_the_gold_standard
         x = 1
         y = 1
 		cost = 10
@@ -3713,13 +3697,29 @@ focus_tree = {
         continue_if_invalid = no
         cancelable = yes
         bypass_if_unavailable = no
-		
+		mutually_exclusive = { focus = EGY_ponizit_nalog }
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_ponizit_nalog
+        icon = GFX_focus_ITA_devaluate_the_lire
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_povysit_nalog }
 	    prerequisite = { focus = EGY_fasc_vostanovlenie }
 	}
 	
 	focus = {
         id = EGY_ozivit_SH
-        icon = GFX_goal_generic_fortify_city
+        icon = GFX_focus_ITA_workers_unions
         x = -3
         y = 1
 		cost = 10
@@ -3735,7 +3735,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_import_SH
-        icon = GFX_goal_generic_fortify_city
+        icon = GFX_focus_generic_agricultural_subsidies
         x = -1
         y = 1
 		cost = 10
@@ -3750,12 +3750,12 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = EGY_legk
-        icon = GFX_goal_generic_fortify_city
+        id = EGY_legk_prom
+        icon = GFX_focus_CHL_enlarge_the_textile_industries
         x = -1
         y = 1
 		cost = 10
-        relative_position_id = EGY_ozivit_SH
+        relative_position_id = EGY_ponizit_nalog
         available_if_capitulated = no
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -3763,5 +3763,169 @@ focus_tree = {
         bypass_if_unavailable = no
 		
 	    prerequisite = { focus = EGY_ozivit_SH }
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_tyazh_prom
+        icon = GFX_focus_ICE_state_corporatism
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_povysit_nalog
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_zacut_prom_teh
+        icon = GFX_focus_generic_american_investments
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_povysit_nalog
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_dumba_na_nille
+        icon = GFX_focus_IRQ_construct_the_kut_barrage
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+	}
+	
+	focus = {
+        id = EGY_dumba_v_sudane
+        icon = GFX_focus_hol_prepare_the_inundation_lines
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+	}
+	
+	focus = {
+        id = EGY_otcrytie_novuh_shaht
+        icon = GFX_focus_generic_steel
+        x = 3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_tyazh_prom2
+        icon = GFX_focus_GER_factories_for_resources
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_tyazh_prom
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_tyazh_prom }
+		prerequisite = { focus = EGY_otcrytie_novuh_shaht }
+	}
+	
+	focus = {
+        id = EGY_turiszm
+        icon = GFX_focus_RAJ_just_good_business
+        x = -5
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_otkrit_suecz
+        icon = GFX_focus_generic_the_suez
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_zakrit_suecz }
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+		prerequisite = { focus = EGY_import_SH }
+	}
+	
+	focus = {
+        id = EGY_zakrit_suecz
+        icon = GFX_focus_generic_mediterranean_sea_focus
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_otkrit_suecz }
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+		prerequisite = { focus = EGY_import_SH }
+	}
+	
+	focus = {
+        id = EGY_black_gold
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_otcrytie_novuh_shaht
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_otcrytie_novuh_shaht }
 	}
 }
