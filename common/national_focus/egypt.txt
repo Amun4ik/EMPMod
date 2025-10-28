@@ -3672,7 +3672,7 @@ focus_tree = {
 	focus = {
         id = EGY_fasc_vostanovlenie
         icon = GFX_focus_generic_concessions
-        x = 10
+        x = 11
         y = 1
 		cost = 10
         relative_position_id = EGY_fasc_king
@@ -3927,5 +3927,56 @@ focus_tree = {
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_otcrytie_novuh_shaht }
+	}
+	
+	focus = {
+        id = EGY_port_i_verf
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_turiszm
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_turiszm }
+	}
+	
+	focus = {
+        id = EGY_king_monopolia_and_corporation
+        icon = GFX_focus_spa_the_spanish_miracle
+        x = -3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	
+		prerequisite = { focus = EGY_import_SH }
+		prerequisite = { focus = EGY_lozhnyi_parlament }
+	}
+	
+	focus = {
+        id = EGY_eco_chudo
+        icon = GFX_focus_RAJ_special_economic_zones
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_otkrit_suecz }
+		prerequisite = { focus = EGY_tyazh_prom2 }
+		prerequisite = { focus = EGY_dumba_v_sudane focus = EGY_dumba_na_nille }
 	}
 }
