@@ -9,8 +9,5 @@
 # trade = yes/no
 
 opinion_modifiers = {
-
-	GER_tradeembro = {
-		value = 100
-	}
+	EGY_loyaltobritish = { value = 50 }
 }
