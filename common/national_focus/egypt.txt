@@ -3459,7 +3459,7 @@ focus_tree = {
 	focus = {
         id = EGY_afc_allienc
         icon = GFX_focus_spr_masters_of_our_own_fate
-        x = 4
+        x = 5
         y = 1
 		cost = 10
         relative_position_id = EGY_the_name_of_king
@@ -3533,8 +3533,8 @@ focus_tree = {
         cancelable = yes
         bypass_if_unavailable = no
         mutually_exclusive = { focus = EGY_totaler_krieg }
-	    prerequisite = { focus = EGY_axis_podlodki focus = EGY_allienc_ita_esminec } prerequisite = { focus = EGY_army_allienc focus = EGY_allienc_tur }
-		
+	    prerequisite = { focus = EGY_army_allienc focus = EGY_allienc_tur }
+	
 		prerequisite = { focus = EGY_podnyat_orydia }
 		
 	}
@@ -3620,4 +3620,53 @@ focus_tree = {
 		
 	    prerequisite = { focus = EGY_allienc_tur }
 	}
+	
+	focus = {
+        id = EGY_allienc_Uk
+        icon = GFX_focus_eng_motion_of_no_confidence
+        x = 1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_fasc_king_neitralitet }
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_king_neitralitet
+        icon = GFX_focus_SWE_refuge_from_war
+        x = -1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_allienc_Uk }
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
+	focus = {
+        id = EGY_bucker_gitlera
+        icon = GFX_goal_generic_fortify_city
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
 }
