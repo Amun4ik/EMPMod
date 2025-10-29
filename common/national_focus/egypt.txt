@@ -94,8 +94,8 @@ focus_tree = {
     focus = {
         id = EGY_republicanism
         icon = GFX_goal_EGY_Nasserists
-        x = 4
-        y = 2
+        x = 6
+        y = 4
         relative_position_id = EGY_democracy
         cost = 10
         available_if_capitulated = no
@@ -104,6 +104,7 @@ focus_tree = {
         cancelable = yes
         bypass_if_unavailable = no
         prerequisite = { focus = EGY_democracy }
+		prerequisite = { focus = EGY_with_radicals }
 		mutually_exclusive = { focus = EGY_restoresultanat focus = EGY_return1931 focus = EGY_stayincourse }
 
 		completion_reward = {
@@ -114,8 +115,8 @@ focus_tree = {
     focus = {
         id = EGY_stayincourse
         icon = GFX_goal_EGY_neu_old
-        x = 4
-        y = 2
+        x = 6
+        y = 4
         relative_position_id = EGY_constitution
         cost = 10
         available_if_capitulated = no
@@ -124,7 +125,185 @@ focus_tree = {
         cancelable = yes
         bypass_if_unavailable = no
         prerequisite = { focus = EGY_democracy focus = EGY_constitution }
+		prerequisite = { focus = EGY_wafd_compromise }
 		mutually_exclusive = { focus = EGY_restoresultanat focus = EGY_return1931 focus = EGY_republicanism }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_limitkingpower
+        icon = GFX_focus_rom_handle_king
+        x = 1
+        y = 1
+        relative_position_id = EGY_democracy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_democraticelections
+        icon = GFX_focus_generic_election
+        x = -1
+        y = 1
+        relative_position_id = EGY_democracy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_fightbritishinfluence
+        icon = GFX_focus_ARG_cut_ties_with_britain
+        x = 1
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_limitkingpower }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_consolidatepower
+        icon = GFX_goal_EGY_Father_of_the_Nation
+        x = -1
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_limitkingpower }
+		prerequisite = { focus = EGY_democraticelections }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_strong_parliament
+        icon = GFX_focus_ETH_re-convene_the_parliament
+        x = -3
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democraticelections }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd_compromise
+        icon = GFX_focus_GER_monarchy_compromise
+        x = -1
+        y = 1
+        relative_position_id = EGY_consolidatepower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_consolidatepower }
+		prerequisite = { focus = EGY_strong_parliament }
+		mutually_exclusive = { focus = EGY_with_radicals }
+
+		completion_reward = {
+		}
+
+    }
+
+    focus = {
+        id = EGY_with_radicals
+        icon = GFX_focus_ARG_defense_and_democracy
+        x = 1
+        y = 1
+        relative_position_id = EGY_consolidatepower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_consolidatepower }
+		prerequisite = { focus = EGY_fightbritishinfluence }
+		mutually_exclusive = { focus = EGY_wafd_compromise }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd8
+        icon = generic
+        x = 0
+        y = 3
+        relative_position_id = EGY_wafd_compromise
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_wafd_compromise }
+		prerequisite = { focus = EGY_wafd9 }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd9
+        icon = generic
+        x = 0
+        y = 1
+        relative_position_id = EGY_stayincourse
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_stayincourse }
 
 		completion_reward = {
 		}
@@ -134,8 +313,8 @@ focus_tree = {
     focus = {
         id = EGY_return1931
         icon = GFX_goal_EGY_Royal_House
-        x = -4
-        y = 2
+        x = -6
+        y = 4
         relative_position_id = EGY_constitution
         cost = 10
         available_if_capitulated = no
@@ -155,8 +334,8 @@ focus_tree = {
     focus = {
         id = EGY_restoresultanat
         icon = GFX_goal_EGY_khedive
-        x = -4
-        y = 2
+        x = -6
+        y = 4
         relative_position_id = EGY_sultanat
         cost = 10
         available_if_capitulated = no
@@ -175,8 +354,8 @@ focus_tree = {
     focus = {
         id = EGY_commonwealth
         icon = GFX_focus_eng_the_sun_never_sets
-        x = 4
-        y = 2
+        x = 6
+        y = 4
         relative_position_id = EGY_return1931
         cost = 10
         available_if_capitulated = no
@@ -195,8 +374,8 @@ focus_tree = {
     focus = {
         id = EGY_help_from_axis
         icon = GFX_focus_chi_mission_to_germany
-        x = -4
-        y = 2
+        x = -6
+        y = 4
         relative_position_id = EGY_return1931
         cost = 10
         available_if_capitulated = no
@@ -215,8 +394,8 @@ focus_tree = {
     focus = {
         id = EGY_independent
         icon = GFX_goal_EGY_economic_independence
-        x = 4
-        y = 2
+        x = 6
+        y = 4
         relative_position_id = EGY_stayincourse
         cost = 10
         available_if_capitulated = no
@@ -235,8 +414,8 @@ focus_tree = {
     focus = {
         id = EGY_warforindependency
         icon = GFX_focus_attack_britain
-        x = 4
-        y = 2
+        x = 6
+        y = 4
         relative_position_id = EGY_republicanism
         cost = 10
         available_if_capitulated = no
@@ -255,8 +434,8 @@ focus_tree = {
     focus = {
         id = EGY_allywithturkey
         icon = GFX_focus_generic_befriend_turkey
-        x = -4
-        y = 2
+        x = -6
+        y = 4
         relative_position_id = EGY_restoresultanat
         cost = 10
         available_if_capitulated = no
@@ -271,11 +450,13 @@ focus_tree = {
 		}
 
     }
-
+###################################################################################################################################################################################################################
+ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА 
+###################################################################################################################################################################################################################
 	focus = {
         id = EGY_revolution
         icon = GFX_goal_EGY_revolt_against_the_opressors
-        x = 40
+        x = 50
         y = 0
         cost = 10
 		relative_position_id = EGY_quostatus

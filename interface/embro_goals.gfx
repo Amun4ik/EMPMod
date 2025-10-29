@@ -254,6 +254,11 @@ spriteTypes = {
 		name = "GFX_goal_EGY_Constitutional_Statism"
 		texturefile = "gfx/interface/goals/goal_EGY_Constitutional_Statism.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_Father_of_the_Nation"
+		texturefile = "gfx/interface/goals/goal_EGY_Father_of_the_Nation.dds"
+	}
 
 	spriteType = {
 		name = "GFX_goal_EGY_Religious_Uniformity"
