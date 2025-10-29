@@ -3076,4 +3076,102 @@ focus_tree = {
 		
 		prerequisite = { focus = EGY_pravo }
 	}
+	
+	focus = {
+        id = EGY_fasc_army
+        icon = GFX_goal_support_fascism
+        x = 24
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_king focus = EGY_fasc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_army_man
+        icon = GFX_goal_support_fascism
+        x = -5
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_army
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_army }
+	}
+	
+	focus = {
+        id = EGY_peha_prom_skidka
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_mashinki
+        icon = GFX_goal_support_fascism
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_lt_tanki
+        icon = GFX_goal_support_fascism
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_mashinki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_mashinki }
+		prerequisite = { focus = EGY_black_gold }
+	}
+	
+	focus = {
+        id = EGY_tt_tanki
+        icon = GFX_goal_support_fascism
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_lt_tanki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_lt_tanki }
+		prerequisite = { focus = EGY_tyazh_prom2 }
+	}
 }
