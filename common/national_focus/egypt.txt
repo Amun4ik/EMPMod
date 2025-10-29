@@ -1898,7 +1898,7 @@ focus_tree = {
 	 
 	}
 	 
-	focus = {
+    focus = {
         id = EGY_fasc_panarabic
         icon = GFX_focus_IRQ_arab_league
         x = 0
@@ -3978,5 +3978,213 @@ focus_tree = {
 		prerequisite = { focus = EGY_otkrit_suecz }
 		prerequisite = { focus = EGY_tyazh_prom2 }
 		prerequisite = { focus = EGY_dumba_v_sudane focus = EGY_dumba_na_nille }
+	}
+	
+	focus = {
+        id = EGY_compromis_very
+        icon = GFX_focus_AFG_state_atheism
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_seculyarizacia focus = EGY_unictozhit_veru }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_soc_dem focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_unictozhit_veru
+        icon = GFX_focus_generic_annex_country
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_seculyarizacia focus = EGY_compromis_very }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_seculyarizacia
+        icon = GFX_focus_PER_university_of_isfahan
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_dem
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_unictozhit_veru focus = EGY_compromis_very }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_soc_dem }
+	}
+	
+	focus = {
+        id = EGY_arabsoc
+        icon = GFX_focus_BEL_the_grand_place
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_soc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_novoe_provitelstvo
+        icon = GFX_focus_PER_national_museum
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_soc_dem
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_soc_dem }
+	}
+	
+	focus = {
+        id = EGY_sovetnici_SOV
+        icon = GFX_focus_ARG_centralize_power
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_center
+        icon = GFX_focus_fra_loyalty_stalin
+        x = 6
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_pravo focus = EGY_levo }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_levo
+        icon = GFX_focus_fra_loyalty_trotzky
+        x = 4
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_pravo focus = EGY_center }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_pravo
+        icon = GFX_focus_SOV_bukharinists
+        x = 8
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_center focus = EGY_levo }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_loyalny_stalinu
+        icon = GFX_focus_SOV_stalins_cult_of_personality
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_center
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_center }
+	}
+	
+	focus = {
+        id = EGY_verny_mirovoi_revolt
+        icon = GFX_goal_support_fourth_int
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_levo
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_levo }
+	}
+	
+	focus = {
+        id = EGY_verny_mirovoi_revolt
+        icon = GFX_goal_support_fourth_int
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_levo
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_levo }
+	}
+	
+	focus = {
+        id = EGY_nashe_delo_pravoe
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_pravo
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_pravo }
 	}
 }
