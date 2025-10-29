@@ -239,6 +239,21 @@ spriteTypes = {
 		name = "GFX_goal_EGY_Religious_Economic_Elites"
 		texturefile = "gfx/interface/goals/goal_EGY_Religious_Economic_Elites.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_economic_independence"
+		texturefile = "gfx/interface/goals/goal_EGY_economic_independence.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_Army"
+		texturefile = "gfx/interface/goals/goal_EGY_Army.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_Constitutional_Statism"
+		texturefile = "gfx/interface/goals/goal_EGY_Constitutional_Statism.dds"
+	}
 
 	spriteType = {
 		name = "GFX_goal_EGY_Religious_Uniformity"
@@ -393,5 +408,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_EGY_woman_rights"
 		texturefile = "gfx/interface/goals/goal_EGY_woman_rights.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_com"
+		texturefile = "gfx/interface/goals/goal_EGY_com.dds"
 	}
 }

@@ -264,4 +264,14 @@ spriteTypes = {
 		name = "GFX_idea_EGY_zakaria_mohieddin"
 		texturefile = "gfx/interface/advisors/EGY/idea_EGY_zakaria_mohieddin.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_EGY_arab_renaissancen"
+		texturefile = "gfx/interface/advisors/EGY/idea_EGY_arab_renaissance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_EGY_farouks_regency"
+		texturefile = "gfx/interface/advisors/EGY/idea_EGY_farouks_regency.dds"
+	}
 }
