@@ -4,7 +4,7 @@ characters = {
 		name = EGY_Farouk_Muhammad_Ali
 		portraits = {
 			civilian = {
-				large = GFX_EGY_farouk_i
+				large = GFX_portrait_EGY_farouk_i
 			}
 		}
 	}
@@ -13,7 +13,7 @@ characters = {
 		name = EGY_Faud_i
 		portraits = {
 			civilian = {
-				large = GFX_EGY_faud_i
+				large = GFX_portrait_EGY_Fuad_I
 			}
 		}
 		
@@ -29,7 +29,7 @@ characters = {
 		name = EGY_hassan_banna
 		portraits = {
 			civilian = {
-				large = GFX_EGY_hassan_banna
+				large = GFX_portrait_EGY_hassan_banna
 			}
 		}
 		
@@ -45,7 +45,7 @@ characters = {
 		name = EGY_mustafa_nahas
 		portraits = {
 			civilian = {
-				large = GFX_EGY_mustafa_nahas
+				large = GFX_portrait_EGY_mustafa_nahas
 			}
 		}
 		
@@ -61,7 +61,7 @@ characters = {
 		name = EGY_henri_curiel
 		portraits = {
 			civilian = {
-				large = GFX_EGY_henri_curiel
+				large = GFX_portrait_EGY_henri_curiel
 			}
 		}
 		
@@ -70,6 +70,29 @@ characters = {
 			traits = { EGY_anti_colonialist }
 			expire = "1965.1.1.1"
 			id = -1
+		}
+	}
+	
+	############### СОВЕТНИКИ
+	
+	EGY_mohamed_tawfik_naseem_pasha = {
+		name=EGY_mohamed_tawfik_naseem_pasha
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EGY_mohamed_tawfik_naseem_pasha
+			can_be_fired = no
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				economic_reformer
+				EGY_provisional_government
+			}
 		}
 	}
 }
