@@ -14,7 +14,7 @@ focus_tree = {
 
     focus = {
         id = EGY_quostatus
-        icon = GFX_focus_SWE_refuge_from_war
+        icon = GFX_goal_EGY_flag
         x = 0
         y = 0
         cost = 10
@@ -201,7 +201,7 @@ focus_tree = {
 
 	focus = {
         id = EGY_revolution
-        icon = GFX_focus_focus_fra_revolution_utmost
+        icon = GFX_goal_EGY_Populism_Masses
         x = 40
         y = 0
         cost = 10
@@ -239,7 +239,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -2	0
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -1273,7 +1273,7 @@ focus_tree = {
 		relative_position_id = EGY_improveeconomy
 		cost = 10
 
-		cancel_if_invalid = yes = yes
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1293,7 +1293,7 @@ focus_tree = {
 
 		cost = 10
 
-		cancel_if_invalid = yes = yes
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1316,7 +1316,7 @@ focus_tree = {
 			num_of_factories > 34
 		}
 
-		cancel_if_invalid = yes = yes
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		
@@ -1492,7 +1492,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = EGY_militarycooperation
 		cost = 10
-		cancel_if_invalid = yes = yes
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
@@ -1900,7 +1900,7 @@ focus_tree = {
 	 
     focus = {
         id = EGY_fasc_panarabic
-        icon = GFX_focus_IRQ_arab_league
+        icon = GFX_goal_EGY_muslim_brotherhood
         x = 0
         y = 1
         relative_position_id = EGY_Pytch
@@ -4138,22 +4138,6 @@ focus_tree = {
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_center }
-	}
-	
-	focus = {
-        id = EGY_verny_mirovoi_revolt
-        icon = GFX_goal_support_fourth_int
-        x = 0
-        y = 1
-		cost = 10
-        relative_position_id = EGY_levo
-        available_if_capitulated = no
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        cancelable = yes
-        bypass_if_unavailable = no
-		
-		prerequisite = { focus = EGY_levo }
 	}
 	
 	focus = {
