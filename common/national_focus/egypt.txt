@@ -3355,4 +3355,68 @@ focus_tree = {
 		prerequisite = { focus = EGY_lt_tanki }
 		prerequisite = { focus = EGY_tyazh_prom2 }
 	}
+	
+	focus = {
+        id = EGY_arta_skidka
+        icon = GFX_goal_support_fascism
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_doku1
+        icon = GFX_goal_support_fascism
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_peha_prom_skidka
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_peha_prom_skidka }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_doku2
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_skidka_na_doku1
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_skidka_na_doku1 }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_doku1
+        icon = GFX_goal_support_fascism
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_peha_prom_skidka
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_peha_prom_skidka }
+		prerequisite = { focus = EGY_arta_skidka }
 }
