@@ -1564,7 +1564,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_ger_army }
 	  }
 	  
-	focus = {
+    focus = {
         id = EGY_ita_gegemon
         icon = GFX_focus_ITA_subdue_the_sentinels
         x = 0
@@ -3357,7 +3357,7 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = EGY_arta_skidka
+        id = EGY_arta_skidka1
         icon = GFX_goal_support_fascism
         x = 2
         y = 1
@@ -3391,7 +3391,7 @@ focus_tree = {
 	focus = {
         id = EGY_skidka_na_doku2
         icon = GFX_goal_support_fascism
-        x = 0
+        x = 1
         y = 1
 		cost = 10
         relative_position_id = EGY_skidka_na_doku1
@@ -3405,7 +3405,7 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = EGY_skidka_na_doku1
+        id = EGY_skidka_na_proizvodstvo_art
         icon = GFX_goal_support_fascism
         x = 1
         y = 1
@@ -3418,5 +3418,74 @@ focus_tree = {
         bypass_if_unavailable = no
 		
 		prerequisite = { focus = EGY_peha_prom_skidka }
-		prerequisite = { focus = EGY_arta_skidka }
-}
+		prerequisite = { focus = EGY_arta_skidka1 }
+	}
+		
+		focus = {
+        id = EGY_arta_skidka2
+        icon = GFX_goal_support_fascism
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_arta_skidka1
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_arta_skidka1 }
+	}
+	
+		focus = {
+        id = EGY_dop_osnashenie
+        icon = GFX_goal_support_fascism
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_arta_skidka2
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_arta_skidka2 }
+		prerequisite = { focus = EGY_skidka_na_proizvodstvo_art }
+	}
+	
+		focus = {
+        id = EGY_voen_center
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_skidka_na_doku2
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_dop_osnashenie }
+		prerequisite = { focus = EGY_skidka_na_doku2 }
+		prerequisite = { focus = EGY_meh }
+	}
+		
+		focus = {
+        id = EGY_meh
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_mashinki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_mashinki }
+	}
+	
+	
