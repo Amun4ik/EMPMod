@@ -223,12 +223,12 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = GER
-				cic_to_target_factor = 0.1
+				cic_to_target_factor = 0.15
 			}
 			
 			targeted_modifier = {
 				tag = ITA
-				cic_to_target_factor = 0.1
+				cic_to_target_factor = 0.15
 			}
 		}
 		embro_spainpaymentsoviet = {
@@ -248,7 +248,7 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = SOV
-				cic_to_target_factor = 0.1
+				cic_to_target_factor = 0.15
 			}
 		}
 		embro_spainpaymentfrench = {
@@ -268,7 +268,7 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = FRA
-				cic_to_target_factor = 0.1
+				cic_to_target_factor = 0.15
 			}
 		}
 	}
