@@ -251,6 +251,21 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_goal_EGY_Coordinate_with_Al_Fatat"
+		texturefile = "gfx/interface/goals/goal_EGY_Coordinate_with_Al_Fatat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_EGY_Army_Loyal_to_Egypt"
+		texturefile = "gfx/interface/goals/goal_EGY_Army_Loyal_to_Egypt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_EGY_Economic_Liberalisation"
+		texturefile = "gfx/interface/goals/goal_EGY_Economic_Liberalisation.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_goal_EGY_Constitutional_Statism"
 		texturefile = "gfx/interface/goals/goal_EGY_Constitutional_Statism.dds"
 	}
