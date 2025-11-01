@@ -2025,7 +2025,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_fasc_war_spain
-        icon = GFX_focus_focus_fra_intervention_spain
+        icon = GFX_focus_ETH_the_rif
         x = -1
         y = 1
 		cost = 10
