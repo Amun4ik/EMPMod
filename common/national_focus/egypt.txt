@@ -3050,7 +3050,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_eco_chudo
-        icon = GFX_focus_RAJ_special_economic_zones
+        icon = GFX_goal_EGY_Profits_From_Corruption
         x = 0
         y = 2
 		cost = 10
@@ -3260,7 +3260,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_fasc_army
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_EGY_organize_the_egyptian_resistance
         x = 24
         y = 1
 		cost = 10
@@ -3276,7 +3276,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_army_man
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_EGY_Palestine_Defence
         x = -5
         y = 1
 		cost = 10
@@ -3292,7 +3292,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_peha_prom_skidka
-        icon = GFX_goal_support_fascism
+        icon = GFX_focus_AFG_mountain_training
         x = 0
         y = 1
 		cost = 10
@@ -3308,7 +3308,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_mashinki
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_EGY_Sudan_Integration
         x = -2
         y = 1
 		cost = 10
@@ -3324,7 +3324,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_lt_tanki
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_EGY_Operation_Abu
         x = -1
         y = 1
 		cost = 10
@@ -3341,7 +3341,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_tt_tanki
-        icon = GFX_goal_support_fascism
+        icon = GFX_focus_PER_modern_cataphract
         x = -1
         y = 1
 		cost = 10
@@ -3358,7 +3358,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_arta_skidka1
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_generic_army_artillery2
         x = 2
         y = 1
 		cost = 10
@@ -3374,7 +3374,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_skidka_na_doku1
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_generic_allies_build_infantry
         x = -1
         y = 1
 		cost = 10
@@ -3390,7 +3390,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_skidka_na_doku2
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_rhineland
         x = 1
         y = 1
 		cost = 10
@@ -3406,7 +3406,7 @@ focus_tree = {
 	
 	focus = {
         id = EGY_skidka_na_proizvodstvo_art
-        icon = GFX_goal_support_fascism
+        icon = GFX_focus_SWE_let_fly_all_guns
         x = 1
         y = 1
 		cost = 10
@@ -3423,7 +3423,7 @@ focus_tree = {
 		
 		focus = {
         id = EGY_arta_skidka2
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_generic_army_artillery
         x = 1
         y = 1
 		cost = 10
@@ -3439,7 +3439,7 @@ focus_tree = {
 	
 		focus = {
         id = EGY_dop_osnashenie
-        icon = GFX_goal_support_fascism
+        icon = GFX_focus_generic_radio_communication
         x = -1
         y = 1
 		cost = 10
@@ -3456,7 +3456,7 @@ focus_tree = {
 	
 		focus = {
         id = EGY_voen_center
-        icon = GFX_goal_support_fascism
+        icon = GFX_goal_EGY_Army
         x = 0
         y = 1
 		cost = 10
@@ -3474,7 +3474,7 @@ focus_tree = {
 		
 		focus = {
         id = EGY_meh
-        icon = GFX_goal_support_fascism
+        icon = GFX_focus_generic_mechanized
         x = 0
         y = 2
 		cost = 10
