@@ -37,7 +37,7 @@ MON_historical_strategy_plan = {
 		production_effort_2
 		production_effort_3
 		naval_effort	
-        political_correctnes
+        political_correctness
 		indoctrination_focus
 		political_commissars
 		ideological_fanaticism

@@ -9,27 +9,9 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		original_tag = EGY
-		date > 1936.1.1
-		has_country_leader = {
-			character = EGY_Faud_i
-			ruling_only = yes 
-		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-            retire_character = EGY_Faud_i
-			add_country_leader_role = {
-				character =  EGY_Farouk_Muhammad_Ali
-				promote_leader = yes
-				country_leader = {
-					ideology = despotism
-					expire = "1965.1.1.1"
-					traits = { EGY_hedonist EGY_underage_monarch }
-				}
-			}
-		}
 	}
 
 	option = {
@@ -71,7 +53,20 @@ country_event = {
 	}
 
 	option = {
-		name = egypt.1.a	
+		name = egypt.2.a
+		
+		effect_tooltip = {
+            retire_character = EGY_Faud_i
+			add_country_leader_role = {
+				character =  EGY_Farouk_Muhammad_Ali
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { EGY_hedonist EGY_underage_monarch }
+				}
+			}
+		}
 	}	
 }
 
@@ -80,7 +75,7 @@ country_event = {
 	id = egypt.3
 	title = egypt.3.t
 	desc = egypt.3.d
-	picture = GFX_report_event_generic_funeral
+	picture = GFX_report_event_royal_visit
 
 	fire_only_once = yes
 	
@@ -94,13 +89,10 @@ country_event = {
 	}
 
 	immediate = {
-		EGY = {
-            country_event = { id = egypt.5 hours = 288 random_hours = 8 }
-		}
 	}
 
 	option = {
-		name = egypt.2.a
+		name = egypt.3.a
 		remove_country_leader_trait = EGY_underage_monarch
 	}	
 }
