@@ -40,12 +40,12 @@ add_ideas = {
 	volunteer_only
 
 	# National Spirits
+	EGY_old_fleet
+	EGY_old_air
+	EGY_old_industry
+	EGY_old_army
 
 }
-#EGY_old_fleet
-#EGY_old_air
-#EGY_old_industry
-#EGY_old_army
 
 IF = {
 	limit = {
